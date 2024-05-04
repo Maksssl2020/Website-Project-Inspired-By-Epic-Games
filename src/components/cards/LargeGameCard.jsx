@@ -1,5 +1,6 @@
 import React from "react";
-import PlusInCircleIcon from "./icons/PlusInCircleIcon.jsx";
+import PlusInCircleIcon from "../main-elements/icons/PlusInCircleIcon.jsx";
+import AddToWishlistButton from "../main-elements/AddToWishlistButton.jsx";
 
 function LargeGameCard({ gameData }) {
   const {
@@ -12,7 +13,7 @@ function LargeGameCard({ gameData }) {
   } = gameData;
 
   return (
-    <div className="3xl:h-[640px] 3xl:w-[1140px] flex rounded-lg font-medium text-custom-white">
+    <div className="flex rounded-lg font-medium text-custom-white 3xl:h-[640px] 3xl:w-[1140px]">
       <div className="flex">
         <div>
           <div className="absolute h-[641.5px] w-[855px] bg-gradient-to-r from-[#0B0B0B] opacity-45"></div>
@@ -35,10 +36,16 @@ function LargeGameCard({ gameData }) {
             <button className="w-[150px] rounded-md bg-custom-emerald text-custom-white">
               {buttonContent}
             </button>
-            <a className="flex h-[50px] w-[175px] items-center justify-center gap-1 rounded-lg border-2 border-transparent text-sm uppercase hover:cursor-pointer hover:border-custom-emerald hover:bg-custom-gray-100 hover:bg-opacity-40">
-              <PlusInCircleIcon />
-              <span>Add to wishlist</span>
-            </a>
+            <AddToWishlistButton
+              additionalStyling={[
+                "h-[50px]",
+                "w-[175px]",
+                "hover:bg-custom-gray-100",
+                "hover:bg-opacity-40",
+                "hover:bg-custom-gray-100",
+                "hover:bg-opacity-40",
+              ]}
+            />
           </div>
         </div>
       </div>
