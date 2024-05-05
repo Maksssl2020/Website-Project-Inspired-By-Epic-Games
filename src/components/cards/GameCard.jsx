@@ -1,6 +1,5 @@
 import React from "react";
 import GamePrice from "../main-elements/GamePrice.jsx";
-import gamePrice from "../main-elements/GamePrice.jsx";
 
 function GameCard({ gameData }) {
   const { image, edition, title, discount, price } = gameData;

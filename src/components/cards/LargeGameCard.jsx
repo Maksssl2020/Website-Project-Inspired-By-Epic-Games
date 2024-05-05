@@ -3,14 +3,8 @@ import PlusInCircleIcon from "../main-elements/icons/PlusInCircleIcon.jsx";
 import AddToWishlistButton from "../main-elements/AddToWishlistButton.jsx";
 
 function LargeGameCard({ gameData }) {
-  const {
-    wallpaperImage,
-    logoImage,
-    coverImage,
-    title,
-    description,
-    buttonContent,
-  } = gameData;
+  const { wallpaperImage, logoImage, title, description, buttonContent } =
+    gameData;
 
   return (
     <div className="flex rounded-lg font-medium text-custom-white 3xl:h-[640px] 3xl:w-[1140px]">
@@ -23,7 +17,7 @@ function LargeGameCard({ gameData }) {
             alt={title}
           />
         </div>
-        <div className="absolute ml-16 flex h-[300px] w-[450px] translate-y-72 flex-col content-end justify-between">
+        <div className="absolute ml-16 flex h-[300px] w-[450px] translate-y-52 flex-col content-end justify-between 3xl:translate-y-72">
           <div className="h-[125px] w-[300px]">
             <img
               className="inset-0 h-full w-auto object-contain"
