@@ -25,6 +25,11 @@ function Header() {
               </Link>,
               "py-1 pl-4",
             ],
+            <HeaderButton
+              buttonContent="Browse"
+              key="button-browse"
+              link="/browse"
+            />,
             <HeaderButton buttonContent="Support" key={"button-support"} />,
             <HeaderButton
               buttonContent="Distribute"
@@ -36,7 +41,15 @@ function Header() {
 
         <ContentList
           components={[
-            [<SearchBar key={"search-bar"} />, "mr-8"],
+            [
+              <SearchBar
+                iconColor="#aaaaae"
+                inputText="Search Store"
+                containerStyling={["bg-custom-gray-200", "rounded-full", "p-2"]}
+                key={"search-bar"}
+              />,
+              "mr-4",
+            ],
             <GlobeIcon key={"globe-icon"} />,
             <UserIcon key={"user-icon"} />,
           ]}

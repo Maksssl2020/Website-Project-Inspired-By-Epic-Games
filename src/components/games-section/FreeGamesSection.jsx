@@ -7,7 +7,7 @@ import MainButton from "../main-elements/MainButton.jsx";
 
 function FreeGamesSection() {
   return (
-    <div className=" 3xl:w-[1430px] 3xl:h-[670px] rounded-lg bg-custom-gray-300 text-custom-white  2xl:w-[1230px]">
+    <div className=" rounded-lg bg-custom-gray-300 text-custom-white 2xl:w-[1230px] 3xl:h-[670px]  3xl:w-[1430px]">
       <div className="m-8">
         <div className="mb-8 flex h-[30px] items-center gap-4">
           <GiftIcon />
@@ -19,7 +19,9 @@ function FreeGamesSection() {
                 "text-lg",
                 "w-[150px]",
                 "h-[45px]",
-                "border-custom-white",
+                "border-2",
+                "hover:bg-custom-gray-100",
+                "hover:bg-opacity-15",
               ]}
             />
           </span>

@@ -1,18 +1,21 @@
 import React from "react";
-import RatingStarIcon from "./icons/RatingStarIcon.jsx";
 import Ratings from "./Ratings.jsx";
 
-function TitleSection() {
+function TitleSection({ title, ratings }) {
+  const additionalSectionsNames = ["Overview", "DLC", "FAQ", "Reviews"];
+
   return (
     <div>
-      <h1 className="text-5xl font-medium text-custom-white">Manor Lords</h1>
+      <h1 className="text-5xl font-medium text-custom-white">{title}</h1>
       <p className="mt-5">
-        <Ratings gameRatingScore={3.6} />
+        <Ratings gameRatingScore={ratings} />
       </p>
       <ul className="mt-6 flex gap-4 text-xl text-custom-gray-100">
-        <li>Overview</li>
-        <li>DLC</li>
-        <li>FAQ</li>
+        {additionalSectionsNames.map((sectionName) => (
+          <li className="border-b-2 border-transparent hover:cursor-pointer hover:border-custom-emerald">
+            {sectionName}
+          </li>
+        ))}
       </ul>
     </div>
   );

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 function MainSliderButton({ buttonContent }) {
   const [gamePage, setGamePage] = useState(false);

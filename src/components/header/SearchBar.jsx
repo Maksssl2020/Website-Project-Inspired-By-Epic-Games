@@ -1,16 +1,36 @@
 import React from "react";
 import MagnifyingGlassIcon from "./icons/MagnifyingGlassIcon.jsx";
 
-function SearchBar() {
+function SearchBar({
+  iconColor,
+  inputText,
+  containerStyling = undefined,
+  inputStyling = undefined,
+}) {
+  let containerDefaultStyle = "flex items-center";
+  let inputDefaultStyle = "bg-transparent focus:outline-none";
+
+  if (Array.isArray(containerStyling)) {
+    containerStyling.forEach((style) => {
+      containerDefaultStyle += ` ${style}`;
+    });
+  }
+
+  if (Array.isArray(inputStyling)) {
+    inputStyling.forEach((style) => {
+      inputDefaultStyle += ` ${style}`;
+    });
+  }
+
   return (
-    <div className="bg-custom-gray-200 text-custom-gray-100 flex items-center rounded-full py-2 pr-2">
-      <span className="mx-2">
-        <MagnifyingGlassIcon />
+    <div className={containerDefaultStyle}>
+      <span className="mr-2">
+        <MagnifyingGlassIcon color={iconColor} />
       </span>
       <input
         type="text"
-        placeholder="Search store"
-        className=" placeholder:text-custom-gray-100 rounded-lg border-none bg-transparent focus:outline-none"
+        placeholder={inputText}
+        className={inputDefaultStyle}
       />
     </div>
   );

@@ -13,9 +13,15 @@ function RequirementsList({ requirementsData, reqType }) {
 
   for (let i = 0; i < requirementsType.length; i++) {
     data.push(
-      <li>
-        <p className="text-custom-gray-100">{requirementsType[i]}</p>
-        <p className="text-custom-white">{requirementsData[i]}</p>
+      <li
+        className={
+          requirementsType[i].length === 3
+            ? "mt-5 flex h-[60px] flex-col"
+            : "mt-5 flex h-[40px] flex-col"
+        }
+      >
+        <span className="text-custom-gray-100">{requirementsType[i]}</span>
+        <span className="text-custom-white">{requirementsData[i]}</span>
       </li>,
     );
   }
@@ -23,7 +29,7 @@ function RequirementsList({ requirementsData, reqType }) {
   return (
     <div>
       <p className="text-custom-gray-100">{reqType}</p>
-      <ul className="mt-4 flex flex-col gap-6">{data}</ul>
+      <ul className="mt-2 flex flex-col">{data}</ul>
     </div>
   );
 }

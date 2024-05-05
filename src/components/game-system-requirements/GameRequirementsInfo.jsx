@@ -20,25 +20,18 @@ function GameRequirementsInfo() {
   ];
 
   return (
-    <div className="mt-8 flex h-[700px] w-[1050px] flex-col rounded-lg border-2 border-custom-emerald p-4">
+    <div className="mt-8 flex w-[1050px] flex-col rounded-lg border-2 border-custom-emerald p-4">
       <div className="self-center">
         <h2 className="w-full text-2xl text-custom-white">
           System Requirements
         </h2>
       </div>
-      <div className="m-4 grid grid-cols-2 text-sm">
-        <div>
-          <RequirementsList
-            requirementsData={testMinReqData}
-            reqType="Minimum"
-          />
-        </div>
-        <div>
-          <RequirementsList
-            requirementsData={texsRecReqData}
-            reqType="Recommended"
-          />
-        </div>
+      <div className="mx-4 mt-10 grid grid-cols-2 text-sm font-medium">
+        <RequirementsList requirementsData={testMinReqData} reqType="Minimum" />
+        <RequirementsList
+          requirementsData={texsRecReqData}
+          reqType="Recommended"
+        />
       </div>
     </div>
   );

@@ -1,8 +1,6 @@
 import React from "react";
 import GamesTableButton from "./GamesTableButton.jsx";
-import { MainSliderGamesData } from "../../website-data/MainSliderGamesData.js";
 import MainButton from "../main-elements/MainButton.jsx";
-import { gamesTableData } from "../../website-data/GamesTableData.js";
 
 function GamesTableButtons({ text, gamesData }) {
   return (
@@ -12,7 +10,13 @@ function GamesTableButtons({ text, gamesData }) {
         <span className="ml-auto">
           <MainButton
             buttonContent="View More"
-            additionalStyling={["rounded-md", "w-[115px]"]}
+            additionalStyling={[
+              "rounded-md",
+              "w-[115px]",
+              "border-2",
+              "hover:bg-custom-gray-100",
+              "hover:bg-opacity-15",
+            ]}
           />
         </span>
       </div>

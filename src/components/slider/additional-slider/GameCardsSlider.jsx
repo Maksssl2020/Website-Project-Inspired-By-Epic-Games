@@ -21,7 +21,7 @@ function GameCardsSlider({ gameCards }) {
         modules={[Autoplay]}
       >
         {gameCards.map((game, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} className="mx-1 my-4">
             <GameCard gameData={game} />
           </SwiperSlide>
         ))}
