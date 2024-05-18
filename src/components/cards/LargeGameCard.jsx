@@ -7,17 +7,17 @@ function LargeGameCard({ gameData }) {
     gameData;
 
   return (
-    <div className="flex rounded-lg font-medium text-custom-white 3xl:h-[640px] 3xl:w-[1140px]">
+    <div className="flex rounded-lg font-medium text-custom-white ">
       <div className="flex">
         <div>
-          <div className="absolute h-[641.5px] w-[855px] bg-gradient-to-r from-[#0B0B0B] opacity-45"></div>
+          <div className="absolute h-full w-full bg-gradient-to-r from-[#0B0B0B] opacity-45"></div>
           <img
             className="inset-0 self-center rounded-lg"
             src={wallpaperImage}
             alt={title}
           />
         </div>
-        <div className="absolute ml-16 flex h-[300px] w-[450px] translate-y-52 flex-col content-end justify-between 3xl:translate-y-72">
+        <div className="absolute ml-16 flex h-[300px] w-[450px] translate-y-52 flex-col content-end justify-between 2xl:translate-y-72">
           <div className="h-[125px] w-[300px]">
             <img
               className="inset-0 h-full w-auto object-contain"

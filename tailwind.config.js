@@ -15,7 +15,8 @@ export default {
         "custom-gray-300": "#2c2c2f",
       },
       screens: {
-        "3xl": "1600px",
+        sx: "550px",
+        "2xs": "549px",
       },
     },
   },
