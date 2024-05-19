@@ -4,13 +4,13 @@ function GamesTableButton({ buttonContent }) {
   const { image, title, discount, price } = buttonContent;
 
   return (
-    <button className="group flex items-center gap-2 rounded-lg border-2 border-transparent px-3 py-3 hover:border-custom-emerald hover:bg-custom-gray-300 lg:h-[80px] lg:w-[260px] xl:h-[100px] xl:w-[355px] 2xl:h-[160px] 2xl:w-[455px]">
+    <button className="group flex items-center gap-2 rounded-lg border-2 border-transparent px-3 py-3 hover:border-custom-emerald hover:bg-custom-gray-300 max-sm:h-[64px] max-sm:w-[315px] sm:h-[64px] sm:w-[260px] md:h-[64px] md:w-[240px] md:text-sm lg:h-[80px] lg:w-[260px] xl:h-[100px] xl:w-[355px] 2xl:h-[160px] 2xl:w-[455px]">
       <img
         className="inset-0 h-full rounded-lg transition-transform ease-in-out group-hover:scale-110"
         src={image}
         alt={title}
       />
-      <div className="ml-5 flex flex-col space-y-0.5 text-left">
+      <div className="ml-5 flex flex-col space-y-0.5 text-left sm:text-sm">
         <p>{title}</p>
         <div className="text-sm lg:text-xs">
           <GamePrice baseGamePrice={price} discount={discount} />

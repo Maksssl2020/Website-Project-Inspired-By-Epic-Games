@@ -6,11 +6,11 @@ import Footer from "../components/footer/Footer.jsx";
 
 function Home() {
   return (
-    <div className="mx-20 my-10 lg:mx-40">
+    <div className="my-10 lg:mx-2 xl:mx-20">
       <div className="flex justify-center">
         <MainSlider />
       </div>
-      <div className="mx-auto mt-20">
+      <div className="mx-auto 2xs:mt-20">
         <GameCardsSection />
       </div>
       <div className="mt-20 flex justify-center">

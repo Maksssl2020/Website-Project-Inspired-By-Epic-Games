@@ -18,6 +18,8 @@ function GamesTableButtons({ text, gamesData }) {
               "hover:bg-opacity-15",
               "lg:w-[95px]",
               "lg:text-sm",
+              "md:text-xs",
+              "max-sm:w-[110px]",
             ]}
           />
         </span>

@@ -3,7 +3,7 @@ import React from "react";
 function InstagramIcon() {
   return (
     <svg
-      className="h-[40px] w-[40px] cursor-pointer fill-custom-gray-100 hover:fill-custom-emerald"
+      className="h-[40px] w-[40px] cursor-pointer fill-custom-gray-100 hover:fill-custom-emerald max-md:h-[25px] max-md:w-[25px]"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 30 30"
     >

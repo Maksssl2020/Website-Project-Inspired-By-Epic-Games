@@ -10,7 +10,7 @@ function GameCardsSlider({ gameCards }) {
   return (
     <div>
       <Swiper
-        slidesPerView={5}
+        slidesPerView={3}
         spaceBetween={30}
         loop={true}
         speed={1200}
@@ -19,6 +19,23 @@ function GameCardsSlider({ gameCards }) {
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}
+        breakpoints={{
+          1536: {
+            slidesPerView: 6,
+          },
+          1280: {
+            slidesPerView: 6,
+          },
+          1024: {
+            slidesPerView: 5,
+          },
+          768: {
+            slidesPerView: 5,
+          },
+          640: {
+            slidesPerView: 4,
+          },
+        }}
       >
         {gameCards.map((game, index) => (
           <SwiperSlide key={index} className="mx-1 my-4">
