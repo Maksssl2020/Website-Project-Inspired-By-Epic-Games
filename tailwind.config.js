@@ -17,6 +17,7 @@ export default {
       screens: {
         sx: "550px",
         "2xs": "549px",
+        "3xs": "480px",
       },
     },
   },

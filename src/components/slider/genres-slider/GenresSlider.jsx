@@ -8,7 +8,7 @@ function GenresSlider() {
   return (
     <div>
       <Swiper
-        slidesPerView={5}
+        slidesPerView={2}
         spaceBetween={10}
         loop={true}
         speed={1200}
@@ -17,11 +17,17 @@ function GenresSlider() {
           disableOnInteraction: false,
         }}
         breakpoints={{
-          1600: {
+          1536: {
             slidesPerView: 5,
           },
           1280: {
             slidesPerView: 4,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+          768: {
+            slidesPerView: 2,
           },
         }}
         modules={[Autoplay]}

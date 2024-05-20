@@ -3,6 +3,7 @@ import AppLayout from "./layout/AppLayout.jsx";
 import Home from "./pages/Home.jsx";
 import Game from "./pages/Game.jsx";
 import Browse from "./pages/Browse.jsx";
+import SignIn from "./pages/SignIn.jsx";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "/browse",
         element: <Browse />,
+      },
+      {
+        path: "/login",
+        element: <SignIn />,
       },
     ],
   },

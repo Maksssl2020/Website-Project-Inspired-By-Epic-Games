@@ -20,8 +20,8 @@ function GameImagesSlider({ gameData }) {
   return (
     <div>
       <TitleSection title={title} ratings={ratings} />
-      <div className="mt-4 flex">
-        <div className="h-[585px] w-[1050px] rounded-lg">
+      <div className="mt-4 flex max-md:flex-col">
+        <div className="max-sm:w-[400px] sm:w-[500px] lg:w-[700px] xl:w-[900px] 2xl:w-[1050px]">
           <Swiper
             slidesPerView={1}
             spaceBetween={0}
@@ -39,15 +39,17 @@ function GameImagesSlider({ gameData }) {
           </Swiper>
         </div>
 
-        <SidePanel
-          logo={logo}
-          title={title}
-          discount={discount}
-          price={price}
-          additionalInfo={additionalInfo}
-        />
+        <div>
+          <SidePanel
+            logo={logo}
+            title={title}
+            discount={discount}
+            price={price}
+            additionalInfo={additionalInfo}
+          />
+        </div>
       </div>
-      <div className="mt-8 w-[1050px] rounded-lg border-2 border-custom-emerald p-4 text-xl text-custom-white">
+      <div className="rounded-lg border-2 border-custom-emerald p-4 text-custom-white max-xl:-translate-y-14 max-lg:-translate-y-36 max-md:mt-8 max-md:-translate-y-0 max-md:text-[14px] max-sm:w-[400px] sm:w-[500px] md:w-[500px] md:text-sm lg:w-[700px] xl:mt-8 xl:w-[900px] xl:text-lg 2xl:w-[1050px] 2xl:text-xl">
         {description}
       </div>
     </div>

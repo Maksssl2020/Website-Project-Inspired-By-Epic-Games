@@ -20,13 +20,13 @@ function GameRequirementsInfo() {
   ];
 
   return (
-    <div className="mt-8 flex w-[1050px] flex-col rounded-lg border-2 border-custom-emerald p-4">
+    <div className="flex flex-col rounded-lg border-2 border-custom-emerald p-4 max-lg:-translate-y-28 max-md:-translate-y-0 max-sm:w-[400px] sx:mt-8 sm:w-[500px] md:w-[500px] lg:w-[700px] xl:mt-8 xl:w-[900px] 2xl:w-[1050px]">
       <div className="self-center">
-        <h2 className="w-full text-2xl text-custom-white">
+        <h2 className="w-full text-custom-white sm:text-lg xl:text-2xl">
           System Requirements
         </h2>
       </div>
-      <div className="mx-4 mt-10 grid grid-cols-2 text-sm font-medium">
+      <div className="grid grid-cols-2 font-medium max-md:mx-2 max-md:mt-2 max-md:text-[10px] md:text-xs lg:mx-4 lg:mt-10 lg:text-sm">
         <RequirementsList requirementsData={testMinReqData} reqType="Minimum" />
         <RequirementsList
           requirementsData={texsRecReqData}

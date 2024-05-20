@@ -1,25 +1,12 @@
 import React from "react";
 import GameCard from "../cards/GameCard.jsx";
 import { GamesWithDiscount } from "../../website-data/GamesCardData.js";
-import MagnifyingGlassIcon from "../header/icons/MagnifyingGlassIcon.jsx";
-import SearchBar from "../header/SearchBar.jsx";
 import FiltersPanel from "../filters-panel/FiltersPanel.jsx";
 import FilterButton from "../filters-panel/FilterButton.jsx";
 import ChevronDown from "../filters-panel/icons/ChevronDown.jsx";
+import ChevronDoubleDown from "../filters-panel/icons/ChevronDoubleDown.jsx";
 
 function BrowseGameSection() {
-  function getMarginDependsOnIndex(index) {
-    if ((index + 1) % 5 === 0) {
-      return "mr-0 ml-2";
-    } else if (index === 0) {
-      return "ml-0 mr-2";
-    } else if (index % 5 === 0) {
-      return "ml-0 mr-2";
-    } else {
-      return "mx-2";
-    }
-  }
-
   return (
     <div>
       <div className="ml-1 flex">
@@ -28,19 +15,23 @@ function BrowseGameSection() {
           <FilterButton buttonContent="ALL" />
           <ChevronDown />
         </p>
+        <p className="ml-5 font-medium text-custom-gray-100">FILTERS:</p>
+        <p className="ml-2 flex text-white hover:cursor-pointer">
+          <ChevronDoubleDown />
+        </p>
       </div>
-      <div className="flex w-[1430px]">
-        <ul className="flex w-[1156px] flex-wrap">
+      <div className="flex md:w-[730px] lg:w-[960px] xl:w-[1140px] 2xl:w-[1430px]">
+        <ul className="max-3xs:flex-col flex flex-wrap">
           {GamesWithDiscount.map((game, index) => (
             <li
               key={index}
-              className={`my-4 ${getMarginDependsOnIndex(index)}`}
+              className={`mx-[6px] my-4 max-md:w-[210px] max-sm:w-[140px]`}
             >
               <GameCard gameData={game} />
             </li>
           ))}
         </ul>
-        <div className="h-[555px] w-[260px]">
+        <div className="h-[555px] max-2xl:-translate-x-24 max-lg:hidden md:-translate-x-0 lg:w-[260px]">
           <FiltersPanel />
         </div>
       </div>

@@ -51,7 +51,9 @@ function Header() {
               "mr-4",
             ],
             <GlobeIcon key={"globe-icon"} />,
-            <UserIcon key={"user-icon"} />,
+            <Link to="login" key="link-to-login-page">
+              <UserIcon key={"user-icon"} />
+            </Link>,
           ]}
           additionalStyling={["mr-4"]}
         />

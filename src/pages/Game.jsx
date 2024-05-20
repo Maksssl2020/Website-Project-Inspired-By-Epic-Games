@@ -5,7 +5,7 @@ import { gameFullData } from "../website-data/GameFullData.js";
 
 function Game() {
   return (
-    <div className="mx-20 my-10 flex flex-col">
+    <div className="my-10 flex flex-col lg:mx-20">
       <div className="self-center">
         <GameImagesSlider gameData={gameFullData[0]} />
         <GameRequirementsInfo />

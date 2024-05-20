@@ -16,8 +16,8 @@ function RequirementsList({ requirementsData, reqType }) {
       <li
         className={
           requirementsType[i].length === 3
-            ? "mt-5 flex h-[60px] flex-col"
-            : "mt-5 flex h-[40px] flex-col"
+            ? "flex h-[60px] flex-col sm:mt-2 md:mt-4 lg:mt-5"
+            : "flex h-[40px] flex-col sm:mt-2 md:mt-4 lg:mt-5"
         }
       >
         <span className="text-custom-gray-100">{requirementsType[i]}</span>
