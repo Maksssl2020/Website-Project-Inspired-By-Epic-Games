@@ -14,7 +14,7 @@ function Header() {
     <header className="sticky left-0 top-0 z-10 w-full bg-[#18181c] px-1 py-4 font-medium transition-all">
       <nav className="flex items-center justify-between">
         <a className="border-r-2 border-custom-white px-4 py-1">
-          <img src={ShopLogo} alt="shop-logo" className="w-10" />
+          <img src={ShopLogo} alt="shop-logo" className="w-10 " />
         </a>
 
         <ContentList
