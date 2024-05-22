@@ -6,7 +6,7 @@ import FilterButton from "../filters-panel/FilterButton.jsx";
 import ChevronDown from "../filters-panel/icons/ChevronDown.jsx";
 import ChevronDoubleDown from "../filters-panel/icons/ChevronDoubleDown.jsx";
 
-function BrowseGameSection() {
+function BrowseGamesSection() {
   return (
     <div>
       <div className="ml-1 flex">
@@ -21,7 +21,7 @@ function BrowseGameSection() {
         </p>
       </div>
       <div className="flex md:w-[730px] lg:w-[960px] xl:w-[1140px] 2xl:w-[1430px]">
-        <ul className="max-3xs:flex-col flex flex-wrap">
+        <ul className="flex flex-wrap max-3xs:flex-col">
           {GamesWithDiscount.map((game, index) => (
             <li
               key={index}
@@ -39,4 +39,4 @@ function BrowseGameSection() {
   );
 }
 
-export default BrowseGameSection;
+export default BrowseGamesSection;

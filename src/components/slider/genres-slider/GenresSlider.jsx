@@ -1,7 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { genresData } from "../../../website-data/GenresData.js";
-import Genre from "../../broswe-page-genres-section/Genre.jsx";
+import Genre from "../../browse-page-genres-section/Genre.jsx";
 import { Autoplay } from "swiper/modules";
 
 function GenresSlider() {

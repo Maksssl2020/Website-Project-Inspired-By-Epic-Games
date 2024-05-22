@@ -30,10 +30,15 @@ function Header() {
               key="button-browse"
               link="/browse"
             />,
-            <HeaderButton buttonContent="Support" key={"button-support"} />,
             <HeaderButton
-              buttonContent="Distribute"
-              key={"button-distribute"}
+              buttonContent="Wishlist"
+              key={"button-wishlist"}
+              link="/wishlist"
+            />,
+            <HeaderButton
+              buttonContent="Cart"
+              key={"button-cart"}
+              link="/cart"
             />,
           ]}
           additionalStyling={["mr-2", "flex-1"]}

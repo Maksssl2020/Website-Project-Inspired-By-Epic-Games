@@ -1,6 +1,6 @@
 import React from "react";
-import GenresSection from "../components/broswe-page-genres-section/GenresSection.jsx";
-import BrowseGameSection from "../components/games-section/BrowseGameSection.jsx";
+import GenresSection from "../components/browse-page-genres-section/GenresSection.jsx";
+import BrowseGamesSection from "../components/games-section/BrowseGamesSection.jsx";
 
 function Browse() {
   return (
@@ -9,7 +9,7 @@ function Browse() {
         <GenresSection />
       </div>
       <div className="mt-20 flex justify-center">
-        <BrowseGameSection />
+        <BrowseGamesSection />
       </div>
     </div>
   );
