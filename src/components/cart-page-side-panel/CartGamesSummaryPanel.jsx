@@ -48,6 +48,7 @@ function CartGamesSummaryPanel({ gamesData }) {
       <MainButton
         buttonContent={"CHECK OUT"}
         additionalStyling={["bg-custom-emerald", "py-2", "h-[50px]", "mt-4"]}
+        link="/payment"
       />
     </div>
   );
