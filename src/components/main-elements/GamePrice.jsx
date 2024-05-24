@@ -1,10 +1,9 @@
 import React from "react";
+import { calculateFinalPrice } from "../../helpers/PriceCalculator.js";
 
 function GamePrice({ baseGamePrice, discount, pricePosition = null }) {
   function calcGamePriceAfterDiscount() {
-    let discountAsPercent = discount / 100;
-    let gamePriceAfterDiscount =
-      baseGamePrice - baseGamePrice * discountAsPercent;
+    let gamePriceAfterDiscount = calculateFinalPrice(baseGamePrice, discount);
 
     return `PLN ${gamePriceAfterDiscount.toFixed(2)}`;
   }
@@ -24,7 +23,7 @@ function GamePrice({ baseGamePrice, discount, pricePosition = null }) {
 
     gamePriceAfterDiscount = <p>{calcGamePriceAfterDiscount()}</p>;
     discountInfo = (
-      <p className="rounded-md bg-custom-emerald md:h-5 md:w-9 md:px-1 md:py-0.5 md:text-[10px] lg:h-6 lg:w-12 lg:px-2 lg:py-1 lg:text-[12px]">
+      <p className="w-auto rounded-md bg-custom-emerald md:h-5 md:w-9 md:px-1 md:py-0.5 md:text-[10px] lg:h-6 lg:w-12 lg:px-2 lg:py-1 lg:text-[12px]">
         {`-${discount}%`}
       </p>
     );

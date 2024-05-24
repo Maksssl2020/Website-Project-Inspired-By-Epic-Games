@@ -1,6 +1,11 @@
 import React from "react";
 import MainButton from "../main-elements/MainButton.jsx";
 import PriceInfoLabel from "./PriceInfoLabel.jsx";
+import {
+  calculateDiscount,
+  calculateFinalPrice,
+  changeDiscountIntoPercent,
+} from "../../helpers/PriceCalculator.js";
 
 function CartGamesSummaryPanel({ gamesData }) {
   function calcSummaryPrices() {
@@ -9,11 +14,15 @@ function CartGamesSummaryPanel({ gamesData }) {
     let sumOfGamesEndPrice = 0.0;
 
     gamesData.forEach((game) => {
-      let discountAsPercent = game.discount / 100;
-      let gamePriceAfterDiscount = game.baseGamePrice * discountAsPercent;
       sumOfBasicGamesPrice += game.baseGamePrice;
-      sumOfGamesDiscount += gamePriceAfterDiscount;
-      sumOfGamesEndPrice += game.baseGamePrice - gamePriceAfterDiscount;
+      sumOfGamesDiscount += calculateDiscount(
+        game.baseGamePrice,
+        game.discount,
+      );
+      sumOfGamesEndPrice += calculateFinalPrice(
+        game.baseGamePrice,
+        game.discount,
+      );
     });
 
     return Array.of(
