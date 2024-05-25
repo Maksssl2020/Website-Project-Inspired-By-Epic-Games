@@ -1,14 +1,15 @@
 import React from "react";
 
-function GlobeIcon() {
+function GlobeIcon({ onClickAction = null }) {
   return (
     <svg
-      className="h-[35px] w-[35px] hover:stroke-custom-emerald"
+      className="size-9 hover:cursor-pointer hover:stroke-custom-emerald"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
+      onClick={onClickAction}
     >
       <path
         strokeLinecap="round"

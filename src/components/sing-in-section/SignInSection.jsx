@@ -20,19 +20,18 @@ function SignInSection() {
             placeholder={"E-mail address"}
             className="h-[60px] rounded-md border-2 border-custom-emerald bg-transparent p-4 text-custom-white placeholder:bg-transparent placeholder:text-custom-white"
           />
-          <Link to={"/account"}>
-            <MainButton
-              buttonContent={"CONTINUE"}
-              additionalStyling={[
-                "text-custom-white",
-                "bg-custom-emerald",
-                "mt-10",
-                "h-[60px]",
-                "font-bold",
-                "w-full",
-              ]}
-            />
-          </Link>
+          <MainButton
+            buttonContent={"CONTINUE"}
+            additionalStyling={[
+              "text-custom-white",
+              "bg-custom-emerald",
+              "mt-10",
+              "h-[60px]",
+              "font-bold",
+              "w-full",
+            ]}
+            link="/account"
+          />
           <ImageButtons />
         </div>
       </div>

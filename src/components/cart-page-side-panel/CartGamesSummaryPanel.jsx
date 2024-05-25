@@ -1,38 +1,10 @@
 import React from "react";
 import MainButton from "../main-elements/MainButton.jsx";
 import PriceInfoLabel from "./PriceInfoLabel.jsx";
-import {
-  calculateDiscount,
-  calculateFinalPrice,
-  changeDiscountIntoPercent,
-} from "../../helpers/PriceCalculator.js";
+import { calcSummaryPrices } from "../../helpers/PriceCalculator.js";
 
 function CartGamesSummaryPanel({ gamesData }) {
-  function calcSummaryPrices() {
-    let sumOfBasicGamesPrice = 0.0;
-    let sumOfGamesDiscount = 0.0;
-    let sumOfGamesEndPrice = 0.0;
-
-    gamesData.forEach((game) => {
-      sumOfBasicGamesPrice += game.baseGamePrice;
-      sumOfGamesDiscount += calculateDiscount(
-        game.baseGamePrice,
-        game.discount,
-      );
-      sumOfGamesEndPrice += calculateFinalPrice(
-        game.baseGamePrice,
-        game.discount,
-      );
-    });
-
-    return Array.of(
-      `PLN ${sumOfBasicGamesPrice.toFixed(2)}`,
-      `-PLN ${sumOfGamesDiscount.toFixed(2)}`,
-      `PLN ${sumOfGamesEndPrice.toFixed(2)}`,
-    );
-  }
-
-  const calculatedPrices = calcSummaryPrices();
+  const calculatedPrices = calcSummaryPrices(gamesData);
 
   return (
     <div className="flex flex-col text-custom-white">
@@ -56,7 +28,13 @@ function CartGamesSummaryPanel({ gamesData }) {
       </div>
       <MainButton
         buttonContent={"CHECK OUT"}
-        additionalStyling={["bg-custom-emerald", "py-2", "h-[50px]", "mt-4"]}
+        additionalStyling={[
+          "bg-custom-emerald",
+          "py-2",
+          "h-[50px]",
+          "mt-4",
+          "w-full",
+        ]}
         link="/payment"
       />
     </div>

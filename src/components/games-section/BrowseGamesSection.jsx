@@ -32,7 +32,16 @@ function BrowseGamesSection() {
           ))}
         </ul>
         <div className="h-[555px] max-2xl:-translate-x-24 max-lg:hidden md:-translate-x-0 lg:w-[260px]">
-          <FiltersPanel />
+          <FiltersPanel
+            filtersData={[
+              "EVENTS",
+              "PRICE",
+              "GENRE",
+              "FEATURES",
+              "TYPES",
+              "PLATFORM",
+            ]}
+          />
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
-function StoreTextIcon() {
+function StoreTextIcon({ isActive }) {
   return (
     <svg
-      className="w-[65px] hover:fill-custom-emerald"
+      className={`w-[65px] ${isActive ? "fill-custom-emerald" : "hover:fill-custom-emerald "}`}
       fill="#fff"
       viewBox="0 0 54 32"
       xmlns="http://www.w3.org/2000/svg"

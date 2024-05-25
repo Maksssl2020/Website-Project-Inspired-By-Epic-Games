@@ -1,8 +1,7 @@
 import React from "react";
-import { cartGamesData } from "../../website-data/CartGamesData.js";
 import PaymentSummaryGameCard from "../cards/PaymentSummaryGameCard.jsx";
 
-function PaymentSummaryGamesSection() {
+function PaymentSummaryGamesSection({ cartGamesData }) {
   return (
     <ul className="space-y-1">
       {cartGamesData.map((game, index) => (

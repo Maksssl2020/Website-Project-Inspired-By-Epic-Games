@@ -1,8 +1,7 @@
 import React from "react";
 
 function ContentList({ components, additionalStyling = undefined }) {
-  let primaryStyling =
-    "flex items-center gap-4 text-custom-gray-100 max-lg:hidden";
+  let primaryStyling = "flex items-center gap-4 text-custom-gray-100 ";
 
   if (Array.isArray(additionalStyling)) {
     additionalStyling.forEach((styling) => (primaryStyling += ` ${styling}`));

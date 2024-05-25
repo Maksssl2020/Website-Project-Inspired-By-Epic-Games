@@ -1,7 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function MainButton({ buttonContent, additionalStyling, link = "" }) {
+function MainButton({
+  buttonContent,
+  additionalStyling,
+  link = "",
+  onClickAction = null,
+}) {
   let buttonStyle = "rounded-lg px-2 py-1 hover:border-custom-emerald";
 
   if (Array.isArray(additionalStyling)) {
@@ -9,9 +14,11 @@ function MainButton({ buttonContent, additionalStyling, link = "" }) {
   }
 
   return (
-    <button className={buttonStyle}>
-      <Link to={link}>{buttonContent}</Link>
-    </button>
+    <Link to={link}>
+      <button className={buttonStyle} onClick={onClickAction}>
+        {buttonContent}
+      </button>
+    </Link>
   );
 }
 

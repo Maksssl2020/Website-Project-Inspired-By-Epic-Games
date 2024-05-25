@@ -8,63 +8,21 @@ import MenuIcon from "./icons/MenuIcon.jsx";
 import SearchBar from "./SearchBar.jsx";
 import GlobeIcon from "./icons/GlobeIcon.jsx";
 import ContentList from "./ContentList.jsx";
+import HeaderAccordion from "./HeaderAccordion.jsx";
+import HeaderNavigationSection from "./HeaderNavigationSection.jsx";
 
 function Header() {
   return (
-    <header className="sticky left-0 top-0 z-10 w-full bg-[#18181c] px-1 py-4 font-medium transition-all">
+    <header className="sticky left-0 top-0 z-10 w-full bg-[#18181c] px-2 py-4 font-medium transition-all">
       <nav className="flex items-center justify-between">
         <a className="border-r-2 border-custom-white px-4 py-1">
-          <img src={ShopLogo} alt="shop-logo" className="w-10 " />
+          <img src={ShopLogo} alt="shop-logo" className="w-10" />
         </a>
 
-        <ContentList
-          components={[
-            [
-              <Link to="/" key={"link-to-main-page"}>
-                <StoreTextIcon />
-              </Link>,
-              "py-1 pl-4",
-            ],
-            <HeaderButton
-              buttonContent="Browse"
-              key="button-browse"
-              link="/browse"
-            />,
-            <HeaderButton
-              buttonContent="Wishlist"
-              key={"button-wishlist"}
-              link="/wishlist"
-            />,
-            <HeaderButton
-              buttonContent="Cart"
-              key={"button-cart"}
-              link="/cart"
-            />,
-          ]}
-          additionalStyling={["mr-2", "flex-1"]}
-        />
-
-        <ContentList
-          components={[
-            [
-              <SearchBar
-                iconColor="#aaaaae"
-                inputText="Search Store"
-                containerStyling={["bg-custom-gray-200", "rounded-full", "p-2"]}
-                key={"search-bar"}
-              />,
-              "mr-4",
-            ],
-            <GlobeIcon key={"globe-icon"} />,
-            <Link to="login" key="link-to-login-page">
-              <UserIcon key={"user-icon"} />
-            </Link>,
-          ]}
-          additionalStyling={["mr-4"]}
-        />
+        <HeaderNavigationSection />
 
         <a className="hidden max-lg:block">
-          <MenuIcon />
+          <HeaderAccordion />
         </a>
       </nav>
     </header>

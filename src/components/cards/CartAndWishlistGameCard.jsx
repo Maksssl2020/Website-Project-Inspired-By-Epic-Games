@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import PegiInfoButton from "../main-elements/PegiInfoButton.jsx";
 import GamePrice from "../main-elements/GamePrice.jsx";
 import MainButton from "../main-elements/MainButton.jsx";
 
-function CartAndWishlistGameCard({ gameData }) {
+function CartAndWishlistGameCard({ gameData, onRemove }) {
   const { image, edition, title, baseGamePrice, discount, pegiInfo } = gameData;
 
   function calcSaleEndDate() {
@@ -21,7 +21,7 @@ function CartAndWishlistGameCard({ gameData }) {
         <div className="h-[175px] w-[130px]">
           <div className="absolute h-[175px] w-[130px] rounded-lg border-2 border-transparent bg-transparent hover:cursor-pointer hover:border-custom-emerald hover:bg-custom-gray-100 hover:bg-opacity-20"></div>
           <img
-            className="inset-0 h-full w-full self-center rounded-lg object-cover object-cover"
+            className="inset-0 h-full w-full self-center rounded-lg object-cover"
             src={image}
             alt={title}
           />
@@ -47,6 +47,7 @@ function CartAndWishlistGameCard({ gameData }) {
               "underline",
               "hover:no-underline",
             ]}
+            onClickAction={onRemove}
           />
           <MainButton
             buttonContent={"ADD TO CART"}

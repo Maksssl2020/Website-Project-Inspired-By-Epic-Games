@@ -5,18 +5,21 @@ function HeaderButton({
   buttonContent,
   additionalStyling = undefined,
   link = "/",
+  isButtonActive,
+  onClick,
 }) {
-  let buttonStyle =
-    "rounded-lg border-2 border-transparent px-2 py-1 hover:border-custom-emerald hover:bg-custom-gray-300 hover:text-custom-emerald";
+  let buttonStyle = `rounded-lg border-2  px-2 py-1 hover:border-custom-emerald hover:bg-custom-gray-300 hover:text-custom-emerald ${isButtonActive ? "border-custom-emerald bg-custom-gray-300 text-custom-emerald" : "border-transparent"}`;
 
   if (Array.isArray(additionalStyling)) {
     additionalStyling.forEach((style) => (buttonStyle += ` ${style}`));
   }
 
   return (
-    <button className={buttonStyle}>
-      <Link to={link}>{buttonContent}</Link>
-    </button>
+    <Link to={link}>
+      <button onClick={onClick} className={buttonStyle}>
+        {buttonContent}
+      </button>
+    </Link>
   );
 }
 

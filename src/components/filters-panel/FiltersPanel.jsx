@@ -2,7 +2,7 @@ import React from "react";
 import SearchBar from "../header/SearchBar.jsx";
 import FilterButtons from "./FilterButtons.jsx";
 
-function FiltersPanel() {
+function FiltersPanel({ filtersData }) {
   return (
     <>
       <SearchBar
@@ -16,7 +16,7 @@ function FiltersPanel() {
         ]}
         inputStyling={["placeholder:text-custom-white", "text-custom-white"]}
       />
-      <FilterButtons />
+      <FilterButtons filtersData={filtersData} />
     </>
   );
 }
