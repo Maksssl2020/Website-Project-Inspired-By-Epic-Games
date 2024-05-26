@@ -6,6 +6,7 @@ import HeaderButton from "./HeaderButton.jsx";
 import SearchBar from "./SearchBar.jsx";
 import GlobeIcon from "./icons/GlobeIcon.jsx";
 import UserIcon from "./icons/UserIcon.jsx";
+import Badge from "../main-elements/Badge.jsx";
 
 function HeaderNavigationSection() {
   const [activeButtonIndex, setActiveButtonIndex] = React.useState(0);
@@ -36,19 +37,30 @@ function HeaderNavigationSection() {
               isButtonActive={activeButtonIndex === 1}
               onClick={() => handleHeaderButtonClick(1)}
             />,
+            <Badge numberOfItems="3">
+              <HeaderButton
+                buttonContent="Wishlist"
+                key={"button-wishlist"}
+                link="/wishlist"
+                isButtonActive={activeButtonIndex === 2}
+                onClick={() => handleHeaderButtonClick(2)}
+              />
+            </Badge>,
+            <Badge numberOfItems="4">
+              <HeaderButton
+                buttonContent="Cart"
+                key={"button-cart"}
+                link="/cart"
+                isButtonActive={activeButtonIndex === 3}
+                onClick={() => handleHeaderButtonClick(3)}
+              />
+            </Badge>,
             <HeaderButton
-              buttonContent="Wishlist"
-              key={"button-wishlist"}
-              link="/wishlist"
-              isButtonActive={activeButtonIndex === 2}
-              onClick={() => handleHeaderButtonClick(2)}
-            />,
-            <HeaderButton
-              buttonContent="Cart"
-              key={"button-cart"}
-              link="/cart"
-              isButtonActive={activeButtonIndex === 3}
-              onClick={() => handleHeaderButtonClick(3)}
+              buttonContent="News"
+              key={"button-news"}
+              link="/news"
+              isButtonActive={activeButtonIndex === 4}
+              onClick={() => handleHeaderButtonClick(4)}
             />,
           ]}
           additionalStyling={["mr-2", "flex-1"]}

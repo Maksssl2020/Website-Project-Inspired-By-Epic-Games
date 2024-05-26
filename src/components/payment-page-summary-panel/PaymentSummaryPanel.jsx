@@ -1,15 +1,14 @@
-import PaymentSummaryGamesSection from "../games-section/PaymentSummaryGamesSection.jsx";
+import PaymentSummaryGamesSection from "../sections/payment/PaymentSummaryGamesSection.jsx";
 import PriceInfoLabel from "../cart-page-side-panel/PriceInfoLabel.jsx";
 import MainButton from "../main-elements/MainButton.jsx";
 import CancelIcon from "./icons/CancelIcon.jsx";
 import { calcSummaryPrices } from "../../helpers/PriceCalculator.js";
-import { cartGamesData } from "../../website-data/CartGamesData.js";
 import { usePayments } from "../payment-page-payment-methods/PaymentMethodButtonProvider.jsx";
 
-function PaymentSummaryPanel() {
+function PaymentSummaryPanel({ cartGames }) {
   const { selectedPaymentMethod } = usePayments();
-  const calculatedPrices = calcSummaryPrices(cartGamesData);
-
+  const calculatedPrices = calcSummaryPrices(cartGames);
+  console.log(cartGames);
   return (
     <div className="h-full w-full p-4">
       <div className="mb-4 flex items-center font-bold text-custom-white">
@@ -17,7 +16,7 @@ function PaymentSummaryPanel() {
         <MainButton buttonContent={<CancelIcon />} link="/cart" />
       </div>
       <div className="w-full">
-        <PaymentSummaryGamesSection cartGamesData={cartGamesData} />
+        <PaymentSummaryGamesSection cartGamesData={cartGames} />
       </div>
       <div className="mt-4 text-custom-white">
         <PriceInfoLabel valueTitle="Price" value={calculatedPrices[0]} />
@@ -30,7 +29,7 @@ function PaymentSummaryPanel() {
         <p className="font-bold">
           <PriceInfoLabel valueTitle="Subtotal" value={calculatedPrices[2]} />
         </p>
-        <div className="mt-4 text-sm">
+        <div className="mt-4 overflow-hidden text-ellipsis whitespace-nowrap text-sm">
           <PriceInfoLabel valueTitle="Payment details:" />
           <PriceInfoLabel
             valueTitle={`${selectedPaymentMethod} - f***y@gmail.com`}
@@ -47,6 +46,7 @@ function PaymentSummaryPanel() {
             "h-[50px]",
             "font-medium",
           ]}
+          link={"/"}
         />
       </div>
     </div>

@@ -17,8 +17,11 @@ function GenresSlider() {
           disableOnInteraction: false,
         }}
         breakpoints={{
-          1536: {
+          1686: {
             slidesPerView: 5,
+          },
+          1536: {
+            slidesPerView: 4,
           },
           1280: {
             slidesPerView: 4,

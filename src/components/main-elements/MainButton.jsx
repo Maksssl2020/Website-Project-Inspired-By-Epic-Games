@@ -5,6 +5,7 @@ function MainButton({
   buttonContent,
   additionalStyling,
   link = "",
+  state = undefined,
   onClickAction = null,
 }) {
   let buttonStyle = "rounded-lg px-2 py-1 hover:border-custom-emerald";
@@ -14,7 +15,7 @@ function MainButton({
   }
 
   return (
-    <Link to={link}>
+    <Link to={link} state={state}>
       <button className={buttonStyle} onClick={onClickAction}>
         {buttonContent}
       </button>

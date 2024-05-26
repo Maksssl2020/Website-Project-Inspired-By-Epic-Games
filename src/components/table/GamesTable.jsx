@@ -4,7 +4,7 @@ import { gamesTableData } from "../../website-data/GamesTableData.js";
 
 function GamesTable() {
   return (
-    <div className="w-auto">
+    <div className="w-full">
       <div className="grid h-full w-full grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1">
         <div className="border-r-[1px] border-custom-emerald pr-2 max-sm:border-0">
           <GamesTableButtons

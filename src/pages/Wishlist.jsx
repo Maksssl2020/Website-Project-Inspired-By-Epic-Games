@@ -1,8 +1,8 @@
 import React from "react";
 import FiltersPanel from "../components/filters-panel/FiltersPanel.jsx";
-import CartAndWishlistGamesSection from "../components/games-section/CartAndWishlistGamesSection.jsx";
+import CartAndWishlistGamesSection from "../components/sections/cart-and-wishlist/CartAndWishlistGamesSection.jsx";
 import { wishlistGamesData } from "../website-data/WishlistGamesData.js";
-import { CartAndWishlistGamesProvider } from "../components/games-section/CartAndWishlistGamesProvider.jsx";
+import { CartAndWishlistGamesProvider } from "../components/sections/cart-and-wishlist/CartAndWishlistGamesProvider.jsx";
 
 function Wishlist() {
   return (

@@ -1,7 +1,8 @@
 import React from "react";
-import MainButton from "../main-elements/MainButton.jsx";
 import PriceInfoLabel from "./PriceInfoLabel.jsx";
 import { calcSummaryPrices } from "../../helpers/PriceCalculator.js";
+import { Link } from "react-router-dom";
+import MainButton from "../main-elements/MainButton.jsx";
 
 function CartGamesSummaryPanel({ gamesData }) {
   const calculatedPrices = calcSummaryPrices(gamesData);
@@ -35,7 +36,8 @@ function CartGamesSummaryPanel({ gamesData }) {
           "mt-4",
           "w-full",
         ]}
-        link="/payment"
+        link={"/payment"}
+        state={{ gamesData: gamesData }}
       />
     </div>
   );

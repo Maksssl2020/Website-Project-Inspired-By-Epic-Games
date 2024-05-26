@@ -1,14 +1,15 @@
 import React from "react";
-import GameCard from "../cards/GameCard.jsx";
-import { GamesWithDiscount } from "../../website-data/GamesCardData.js";
-import FiltersPanel from "../filters-panel/FiltersPanel.jsx";
-import FilterButton from "../filters-panel/FilterButton.jsx";
-import ChevronDown from "../filters-panel/icons/ChevronDown.jsx";
-import ChevronDoubleDown from "../filters-panel/icons/ChevronDoubleDown.jsx";
+import GameCard from "../../cards/GameCard.jsx";
+import { GamesWithDiscount } from "../../../website-data/GamesCardData.js";
+import FiltersPanel from "../../filters-panel/FiltersPanel.jsx";
+import FilterButton from "../../filters-panel/FilterButton.jsx";
+import ChevronDown from "../../filters-panel/icons/ChevronDown.jsx";
+import ChevronDoubleDown from "../../filters-panel/icons/ChevronDoubleDown.jsx";
+import Pagination from "../../main-elements/pagination/Pagination.jsx";
 
 function BrowseGamesSection() {
   return (
-    <div>
+    <div className="w-auto">
       <div className="ml-1 flex">
         <p className="font-medium text-custom-gray-100">SHOW:</p>
         <p className="ml-4 flex text-white hover:cursor-pointer">
@@ -20,7 +21,7 @@ function BrowseGamesSection() {
           <ChevronDoubleDown />
         </p>
       </div>
-      <div className="flex md:w-[730px] lg:w-[960px] xl:w-[1140px] 2xl:w-[1430px]">
+      <div className="flex w-full md:w-[730px] lg:w-[960px] xl:w-[1140px] 2xl:w-[1430px]">
         <ul className="flex flex-wrap max-3xs:flex-col">
           {GamesWithDiscount.map((game, index) => (
             <li
@@ -44,6 +45,7 @@ function BrowseGamesSection() {
           />
         </div>
       </div>
+      <Pagination pagesMaxNumber={137} />
     </div>
   );
 }

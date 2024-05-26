@@ -1,5 +1,5 @@
 import React from "react";
-import PaymentSummaryGameCard from "../cards/PaymentSummaryGameCard.jsx";
+import PaymentSummaryGameCard from "../../cards/PaymentSummaryGameCard.jsx";
 
 function PaymentSummaryGamesSection({ cartGamesData }) {
   return (

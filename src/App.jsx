@@ -8,6 +8,7 @@ import Account from "./pages/Account.jsx";
 import Wishlist from "./pages/Wishlist.jsx";
 import Cart from "./pages/Cart.jsx";
 import Payment from "./pages/Payment.jsx";
+import News from "./pages/News.jsx";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "/payment",
         element: <Payment />,
+      },
+      {
+        path: "/news",
+        element: <News />,
       },
     ],
   },

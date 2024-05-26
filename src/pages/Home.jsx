@@ -1,6 +1,6 @@
-import GameCardsSection from "../components/games-section/GameCardsSection.jsx";
+import GameCardsSection from "../components/sections/games/GameCardsSection.jsx";
 import MainSlider from "../components/slider/main-slider/MainSlider.jsx";
-import FreeGamesSection from "../components/games-section/FreeGamesSection.jsx";
+import FreeGamesSection from "../components/sections/games/FreeGamesSection.jsx";
 import GamesTable from "../components/table/GamesTable.jsx";
 import Footer from "../components/footer/Footer.jsx";
 

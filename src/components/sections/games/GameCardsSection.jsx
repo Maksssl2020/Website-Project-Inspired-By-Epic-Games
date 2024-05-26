@@ -1,6 +1,6 @@
-import { GamesWithDiscount } from "../../website-data/GamesCardData.js";
-import GameCardsSlider from "../slider/additional-slider/GameCardsSlider.jsx";
-import ChevronRightIcon from "../cards/icons/ChevronRightIcon.jsx";
+import { GamesWithDiscount } from "../../../website-data/GamesCardData.js";
+import GameCardsSlider from "../../slider/additional-slider/GameCardsSlider.jsx";
+import ChevronRightIcon from "../../cards/icons/ChevronRightIcon.jsx";
 
 function GameCardsSection() {
   return (

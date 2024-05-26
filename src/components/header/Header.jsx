@@ -1,13 +1,5 @@
-import { Link } from "react-router-dom";
 import "/src/index.css";
-import HeaderButton from "./HeaderButton.jsx";
 import ShopLogo from "/src/assets/white-shop-logo.png";
-import StoreTextIcon from "./icons/StoreTextIcon.jsx";
-import UserIcon from "./icons/UserIcon.jsx";
-import MenuIcon from "./icons/MenuIcon.jsx";
-import SearchBar from "./SearchBar.jsx";
-import GlobeIcon from "./icons/GlobeIcon.jsx";
-import ContentList from "./ContentList.jsx";
 import HeaderAccordion from "./HeaderAccordion.jsx";
 import HeaderNavigationSection from "./HeaderNavigationSection.jsx";
 

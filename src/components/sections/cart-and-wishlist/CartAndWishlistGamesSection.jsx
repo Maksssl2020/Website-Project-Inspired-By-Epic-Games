@@ -1,8 +1,7 @@
-import React, { useContext } from "react";
-import CartAndWishlistGameCard from "../cards/CartAndWishlistGameCard.jsx";
+import React from "react";
+import CartAndWishlistGameCard from "../../cards/CartAndWishlistGameCard.jsx";
 import { useCartAndWishlistOptions } from "./CartAndWishlistGamesProvider.jsx";
-import { Link } from "react-router-dom";
-import SadIcon from "./icons/SadIcon.jsx";
+import SadIcon from "../icons/SadIcon.jsx";
 
 function CartAndWishlistGamesSection({ sectionTitle, gamesData, sidePanel }) {
   const { gamesList, removeGameFromList, updateGameList, isLoading } =
@@ -38,11 +37,9 @@ function CartAndWishlistGamesSection({ sectionTitle, gamesData, sidePanel }) {
         <h1 className="text-5xl text-custom-white">
           {`You haven't added anything to your ${sectionTitle.toLowerCase()} yet!`}
         </h1>
-        <Link to="/">
-          <p className="text-2xl text-custom-gray-100 underline">
-            Shop for Games
-          </p>
-        </Link>
+        <p className="text-2xl text-custom-gray-100">
+          Go to the shop and add games
+        </p>
       </div>
     );
 
@@ -52,7 +49,7 @@ function CartAndWishlistGamesSection({ sectionTitle, gamesData, sidePanel }) {
       <div className="mt-12 flex">
         <div className="flex">{sectionContent}</div>
         <div className={`ml-8 w-[300px] ${gamesList.length === 0 && "hidden"}`}>
-          {sidePanel}
+          {React.cloneElement(sidePanel, { gamesData: gamesList })}
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@ import PegiInfoButton from "../main-elements/PegiInfoButton.jsx";
 import GamePrice from "../main-elements/GamePrice.jsx";
 import MainButton from "../main-elements/MainButton.jsx";
 
-function CartAndWishlistGameCard({ gameData, onRemove }) {
+function CartAndWishlistGameCard({ gameData, sectionTitle, onAdd, onRemove }) {
   const { image, edition, title, baseGamePrice, discount, pegiInfo } = gameData;
 
   function calcSaleEndDate() {
@@ -14,6 +14,9 @@ function CartAndWishlistGameCard({ gameData, onRemove }) {
 
     return `${day} / ${month} / ${year} at 08:00 PM`;
   }
+
+  let buttonContent =
+    sectionTitle === "Cart" ? "MOVE TO WISHLIST" : "ADD TO CART";
 
   return (
     <div className="flex h-[355px] w-[1100px] justify-between rounded-lg border-2 border-custom-emerald p-8">
@@ -50,7 +53,7 @@ function CartAndWishlistGameCard({ gameData, onRemove }) {
             onClickAction={onRemove}
           />
           <MainButton
-            buttonContent={"ADD TO CART"}
+            buttonContent={buttonContent}
             additionalStyling={[
               "border-2",
               "py-4",
@@ -58,6 +61,7 @@ function CartAndWishlistGameCard({ gameData, onRemove }) {
               "hover:bg-opacity-20",
               "w-[200px]",
             ]}
+            onClickAction={onAdd}
           />
         </div>
       </div>

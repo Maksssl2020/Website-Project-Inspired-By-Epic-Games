@@ -13,6 +13,7 @@ export default {
         "custom-gray-100": "#aaaaae",
         "custom-gray-200": "#303034",
         "custom-gray-300": "#2c2c2f",
+        "custom-black": "#101010",
       },
       screens: {
         xs: "550px",

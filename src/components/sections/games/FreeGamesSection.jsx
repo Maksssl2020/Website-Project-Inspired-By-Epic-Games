@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import FreeGameCard from "../cards/FreeGameCard.jsx";
-import GiftIcon from "../cards/icons/GiftIcon.jsx";
-import { FreeGamesData } from "../../website-data/FreeGamesData.js";
-import MainButton from "../main-elements/MainButton.jsx";
+import FreeGameCard from "../../cards/FreeGameCard.jsx";
+import GiftIcon from "../../cards/icons/GiftIcon.jsx";
+import { FreeGamesData } from "../../../website-data/FreeGamesData.js";
+import MainButton from "../../main-elements/MainButton.jsx";
 
 function FreeGamesSection() {
   const [isSmallWindow, setIsSmallWindow] = React.useState(

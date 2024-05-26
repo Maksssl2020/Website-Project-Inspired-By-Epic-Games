@@ -1,6 +1,6 @@
 import React from "react";
 import GenresSection from "../components/browse-page-genres-section/GenresSection.jsx";
-import BrowseGamesSection from "../components/games-section/BrowseGamesSection.jsx";
+import BrowseGamesSection from "../components/sections/browse/BrowseGamesSection.jsx";
 
 function Browse() {
   return (
