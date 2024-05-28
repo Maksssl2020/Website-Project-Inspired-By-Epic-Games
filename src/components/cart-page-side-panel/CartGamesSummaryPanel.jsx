@@ -9,7 +9,7 @@ function CartGamesSummaryPanel({ gamesData }) {
 
   return (
     <div className="flex flex-col text-custom-white">
-      <h2 className="flex w-full justify-center text-2xl font-medium">
+      <h2 className="flex w-full text-2xl font-medium xl:justify-center">
         Games Summary
       </h2>
       <div className="mt-4 space-y-2">

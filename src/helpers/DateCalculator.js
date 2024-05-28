@@ -6,3 +6,12 @@ export function calcElapsedDays(date) {
 
   return `${differendeInDays}D AGO`;
 }
+
+export function calcSaleEndDate() {
+  const now = new Date(Date.now());
+  const day = now.getDay() + 7;
+  const month = now.getMonth();
+  const year = now.getFullYear();
+
+  return `${day} / ${month} / ${year} at 08:00 PM`;
+}

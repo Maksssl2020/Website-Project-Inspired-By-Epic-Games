@@ -94,6 +94,17 @@ function HeaderAccordion() {
               link={"/cart"}
               onClickAction={handleAccordionClick}
             />
+            <MainButton
+              buttonContent="News"
+              additionalStyling={[
+                "bg-custom-gray-300",
+                "w-full",
+                "h-[50px]",
+                "items-start",
+              ]}
+              link={"/news"}
+              onClickAction={handleAccordionClick}
+            />
           </div>
         </div>
       )}

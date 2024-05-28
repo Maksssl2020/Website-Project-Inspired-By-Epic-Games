@@ -7,7 +7,7 @@ import { CartAndWishlistGamesProvider } from "../components/sections/cart-and-wi
 function Wishlist() {
   return (
     <CartAndWishlistGamesProvider>
-      <div className="mx-20 my-10 flex flex-col items-center">
+      <div className="mx-20 my-10 flex w-auto flex-col items-center">
         <CartAndWishlistGamesSection
           sectionTitle={"Wishlist"}
           gamesData={wishlistGamesData}

@@ -1,5 +1,5 @@
 import React from "react";
-import CartAndWishlistGameCard from "../../cards/CartAndWishlistGameCard.jsx";
+import CartAndWishlistGameCard from "../../cards/cart-wishlist-game-card/CartAndWishlistGameCard.jsx";
 import { useCartAndWishlistOptions } from "./CartAndWishlistGamesProvider.jsx";
 import SadIcon from "../icons/SadIcon.jsx";
 
@@ -43,12 +43,19 @@ function CartAndWishlistGamesSection({ sectionTitle, gamesData, sidePanel }) {
       </div>
     );
 
+  const sidePanelsResponsiveStyling =
+    sectionTitle === "Wishlist"
+      ? "max-xl:hidden"
+      : "max-xl:w-full max-xl:ml-0 max-xl:mt-8";
+
   return (
     <div className="w-auto">
-      <h1 className="text-5xl font-medium text-custom-white">{`My ${sectionTitle}`}</h1>
-      <div className="mt-12 flex">
+      <h1 className="font-medium text-custom-white 3xs:text-2xl sm:text-3xl lg:text-5xl">{`My ${sectionTitle}`}</h1>
+      <div className="mt-12 flex max-xl:flex-col">
         <div className="flex">{sectionContent}</div>
-        <div className={`ml-8 w-[300px] ${gamesList.length === 0 && "hidden"}`}>
+        <div
+          className={`ml-8 xl:w-[250px] 2xl:w-[300px] ${sidePanelsResponsiveStyling} ${gamesList.length === 0 && "hidden"}`}
+        >
           {React.cloneElement(sidePanel, { gamesData: gamesList })}
         </div>
       </div>
