@@ -50,7 +50,7 @@ function CartAndWishlistGamesSection({ sectionTitle, gamesData, sidePanel }) {
 
   return (
     <div className="w-auto">
-      <h1 className="font-medium text-custom-white 3xs:text-2xl sm:text-3xl lg:text-5xl">{`My ${sectionTitle}`}</h1>
+      <h1 className="text-2xl font-medium text-custom-white sm:text-3xl lg:text-5xl">{`My ${sectionTitle}`}</h1>
       <div className="mt-12 flex max-xl:flex-col">
         <div className="flex">{sectionContent}</div>
         <div

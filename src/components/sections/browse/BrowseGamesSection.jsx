@@ -9,8 +9,8 @@ import Pagination from "../../main-elements/pagination/Pagination.jsx";
 
 function BrowseGamesSection() {
   return (
-    <div className="w-auto">
-      <div className="ml-1 flex">
+    <div className="flex w-auto flex-col">
+      <div className="ml-1 mr-auto flex">
         <p className="font-medium text-custom-gray-100">SHOW:</p>
         <p className="ml-4 flex text-white hover:cursor-pointer">
           <FilterButton buttonContent="ALL" />
@@ -21,13 +21,10 @@ function BrowseGamesSection() {
           <ChevronDoubleDown />
         </p>
       </div>
-      <div className="flex w-full md:w-[730px] lg:w-[960px] xl:w-[1140px] 2xl:w-[1430px]">
-        <ul className="flex flex-wrap max-3xs:flex-col">
+      <div className="flex justify-center max-sm:w-[310px] xs:w-[500px] sm:w-[610px] md:w-full lg:w-[960px] xl:w-[1040px] 2xl:w-[1430px]">
+        <ul className="flex flex-wrap">
           {GamesWithDiscount.map((game, index) => (
-            <li
-              key={index}
-              className={`mx-[6px] my-4 max-md:w-[210px] max-sm:w-[140px]`}
-            >
+            <li key={index} className={`mx-[6px] my-4 max-md:w-[140px]`}>
               <GameCard gameData={game} />
             </li>
           ))}

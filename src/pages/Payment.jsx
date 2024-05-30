@@ -9,11 +9,14 @@ function Payment() {
 
   return (
     <PaymentMethodButtonProvider>
-      <div className="my-10 flex w-full justify-center">
-        <div className="w-[1050px] rounded-lg border-2 border-custom-emerald">
+      <div className="mx-auto my-10 flex w-full justify-center max-md:flex-col max-md:items-center">
+        <div className="mb-4 w-[95%] rounded-lg border-2 border-custom-emerald md:hidden md:w-[350px] xl:w-[400px]">
+          <PaymentSummaryPanel cartGames={gamesData} />
+        </div>
+        <div className="w-[95%] rounded-lg border-2 border-custom-emerald max-3xs:text-xs md:w-[500px] lg:w-[650px] xl:w-[900px] 2xl:w-[1030px]">
           <PaymentMethodButtonsSection />
         </div>
-        <div className="ml-4 w-[400px] rounded-lg border-2 border-custom-emerald">
+        <div className="ml-4 rounded-lg border-2 border-custom-emerald max-md:hidden md:w-[350px] xl:w-[400px]">
           <PaymentSummaryPanel cartGames={gamesData} />
         </div>
       </div>

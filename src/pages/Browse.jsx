@@ -4,8 +4,8 @@ import BrowseGamesSection from "../components/sections/browse/BrowseGamesSection
 
 function Browse() {
   return (
-    <div className="mx-20 mt-10">
-      <div className="mx-auto">
+    <div className="mx-2 mt-10 2xs:mx-20">
+      <div className="mx-auto max-3xs:hidden">
         <GenresSection />
       </div>
       <div className="mt-20 flex justify-center">

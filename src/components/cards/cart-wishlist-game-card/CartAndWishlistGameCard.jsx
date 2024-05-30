@@ -10,9 +10,9 @@ function CartAndWishlistGameCard({ gameData, sectionTitle, onAdd, onRemove }) {
     sectionTitle === "Cart" ? "MOVE TO WISHLIST" : "ADD TO CART";
 
   return (
-    <div className="flex justify-between rounded-lg border-2 border-custom-emerald p-8 max-lg:flex-col 3xs:w-[430px] xs:w-[500px] sm:w-[600px] md:w-[700px] lg:h-[385px] lg:w-[900px] 2xl:w-[1100px]">
+    <div className="flex justify-between rounded-lg border-2 border-custom-emerald p-8 max-lg:flex-col max-3xs:w-full 3xs:w-[430px] xs:w-[500px] sm:w-[600px] md:w-[700px] lg:h-[385px] lg:w-[900px] 2xl:w-[1100px]">
       <div className="flex max-lg:flex-col">
-        <div className="relative max-lg:mb-4 3xs:h-[115px] 3xs:w-[85px] md:h-[135px] md:w-[100px] lg:h-[150px] lg:w-[115px] xl:h-[175px] xl:w-[130px]">
+        <div className="relative max-lg:mb-4 max-2xs:h-[115px] max-2xs:w-[85px] md:h-[135px] md:w-[100px] lg:h-[150px] lg:w-[115px] xl:h-[175px] xl:w-[130px]">
           <div className="absolute inset-0 rounded-lg border-2 border-transparent bg-transparent hover:cursor-pointer hover:border-custom-emerald hover:bg-custom-gray-100 hover:bg-opacity-20"></div>
           <img
             className="inset-0 h-full w-full self-center rounded-lg object-cover"
