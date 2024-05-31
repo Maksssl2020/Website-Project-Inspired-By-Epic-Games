@@ -6,8 +6,8 @@ function ImageButtons() {
   return (
     <>
       <div className="mt-10 flex items-center justify-center">
-        <div className="h-[2px] w-[60px] border-t-2 border-custom-emerald"></div>
-        <p className="mx-2 text-sm text-custom-gray-100">
+        <div className="h-[2px] border-t-2 border-custom-emerald max-sm:w-[50px] sm:w-[60px]"></div>
+        <p className="mx-2 text-custom-gray-100 max-sm:text-xs sm:text-sm">
           or continue using your account
         </p>
         <div className="h-[2px] w-[50px] border-t-2 border-custom-emerald"></div>

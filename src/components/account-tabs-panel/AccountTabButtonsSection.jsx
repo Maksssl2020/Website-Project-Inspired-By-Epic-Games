@@ -15,7 +15,7 @@ import StarIcon from "./icons/StarIcon.jsx";
 
 function AccountTabButtonsSection() {
   return (
-    <div className="grid h-full grid-rows-12">
+    <div className="grid h-full w-auto grid-rows-12">
       <AccountTabButton tabData={"ACCOUNT SETTINGS"} tabIcon={<UserIcon />} />
       <AccountTabButton tabData={"EMAIL PREFERENCES"} tabIcon={<IconBell />} />
       <AccountTabButton

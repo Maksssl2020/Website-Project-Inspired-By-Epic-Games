@@ -5,7 +5,7 @@ function NewsLargeCard({ newsData }) {
   const { image, publicationDate, title, description } = newsData;
 
   return (
-    <div className="hover flex h-full flex-col rounded-lg border-2 border-transparent transition-all ease-in-out hover:-translate-y-2 hover:border-custom-emerald md:w-[350px] lg:w-[450px] xl:w-[585px] 2xl:w-[700px]">
+    <div className=" flex h-full flex-col rounded-lg border-2 border-transparent transition-all ease-in-out hover:-translate-y-2 hover:border-custom-emerald md:w-[350px] lg:w-[450px] xl:w-[585px] 2xl:w-[700px]">
       <div className="h-[65%]">
         <img
           className="inset-0 h-full w-full self-center rounded-lg object-cover hover:cursor-pointer"

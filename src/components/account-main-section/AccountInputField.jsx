@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 
 function AccountInputField({
-  widthValue = "300",
   dataInfo = "",
   initialValue = "",
+  additionalStyling = "",
 }) {
   const [value, setValue] = useState(initialValue);
   const [isActive, setIsActive] = useState(initialValue !== "");
 
   useEffect(() => {
-    setIsActive(value !== "");
+    setIsActive(value !== " ");
   }, [value]);
 
   function handleActivation(event) {
@@ -18,10 +18,10 @@ function AccountInputField({
 
   return (
     <div
-      className={
-        "relative h-[60px] rounded-lg border-2 border-custom-emerald bg-transparent focus-within:border-custom-white hover:border-custom-white"
-      }
-      style={{ width: `${widthValue}px` }}
+      className={"relative h-[60px] rounded-lg border-2 border-custom-emerald bg-transparent focus-within:border-custom-white hover:border-custom-white".concat(
+        " ",
+        additionalStyling,
+      )}
     >
       <input
         className={[

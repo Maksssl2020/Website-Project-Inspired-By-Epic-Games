@@ -1,9 +1,9 @@
 import React from "react";
 
-function ChevronDown() {
+function ChevronDown({ isActive = undefined }) {
   return (
     <svg
-      className="h-6 w-6 group-hover:text-white"
+      className={`h-6 w-6 transition-transform duration-300 group-hover:text-white ${isActive ? "rotate-180" : ""}`}
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
