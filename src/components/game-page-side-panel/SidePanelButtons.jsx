@@ -20,11 +20,9 @@ function SidePanelButtons() {
         ]}
       />
       <AddToWishlistButton
-        additionalStyling={[
-          "h-[40px]",
-          "hover:bg-custom-gray-100",
-          "hover:bg-opacity-15",
-        ]}
+        additionalStyling={
+          "h-[40px] hover:bg-custom-gray-100 hover:bg-opacity-15"
+        }
       />
     </div>
   );

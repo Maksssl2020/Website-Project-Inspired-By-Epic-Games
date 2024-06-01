@@ -3,9 +3,9 @@ import AccountInputField from "./AccountInputField.jsx";
 
 function AccountAddressTab() {
   const largeFieldsStyling =
-    "md:w-[300px]  xl:w-[300px] max-md:w-full lg:w-[250px]";
+    "md:w-[300px] xl:w-[300px] max-md:w-full lg:w-[250px]";
   const smallFieldsStyling =
-    "xl:w-[140px]  lg:w-[115px] max-md:w-full md:w-[140px]";
+    "xl:w-[140px] lg:w-[115px] max-md:w-full md:w-[140px]";
 
   return (
     <>
@@ -25,7 +25,7 @@ function AccountAddressTab() {
           dataInfo={"City"}
           additionalStyling={largeFieldsStyling}
         />
-        <div className="flex max-lg:space-y-5 max-md:mt-5 max-md:flex-col md:gap-5">
+        <div className="flex max-md:mt-5 max-md:flex-col max-md:space-y-5 md:gap-5">
           <AccountInputField
             dataInfo={"Region"}
             additionalStyling={smallFieldsStyling}

@@ -11,8 +11,10 @@ function Footer() {
             <IconsGroup />
           </div>
           <div className="my-10 w-full">
-            <span className="text-custom-gray-100">Resources</span>
-            <div className="flex gap-8 text-custom-white max-md:text-[14px] max-sx:text-[12px]">
+            <span className="text-custom-gray-100 max-xs:text-sm">
+              Resources
+            </span>
+            <div className="flex gap-8 text-custom-white max-md:text-[14px] max-xs:text-[12px]">
               <Links linksData={["Careers", "Company", "Management"]} />
               <Links linksData={["Redeem code", "Help", "Games library"]} />
               <Links linksData={["Community", "User laws", "User agreement"]} />

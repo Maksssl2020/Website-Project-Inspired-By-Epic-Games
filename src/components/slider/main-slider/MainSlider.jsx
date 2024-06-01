@@ -10,7 +10,7 @@ import { Autoplay } from "swiper/modules";
 function MainSlider() {
   return (
     <div className="flex">
-      <div className="max-2xs:hidden sx:w-[450px] h-full w-full rounded-lg sm:w-[525px] md:h-[310px] md:w-[550px] lg:h-[430px] lg:w-[760px] xl:h-[530px] xl:w-[940px] 2xl:h-[640px] 2xl:w-[1140px]">
+      <div className="h-full w-full rounded-lg max-2xs:hidden xs:w-[450px] sm:w-[525px] md:h-[310px] md:w-[550px] lg:h-[430px] lg:w-[760px] xl:h-[530px] xl:w-[940px] 2xl:h-[640px] 2xl:w-[1140px]">
         <Swiper
           slidesPerView={1}
           spaceBetween={0}
@@ -34,7 +34,11 @@ function MainSlider() {
         <ul className="space-y-0.5 text-custom-white">
           {MainSliderGamesData.map((data, index) => (
             <li key={index}>
-              <MainSliderButton key={index} buttonContent={data} />
+              <MainSliderButton
+                key={index}
+                buttonContent={data}
+                linkData={data.title}
+              />
             </li>
           ))}
         </ul>

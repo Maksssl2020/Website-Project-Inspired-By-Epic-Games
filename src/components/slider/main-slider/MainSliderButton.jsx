@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Navigate } from "react-router-dom";
 
-function MainSliderButton({ buttonContent }) {
+function MainSliderButton({ buttonContent, linkData }) {
   const [gamePage, setGamePage] = useState(false);
   const { coverImage, title } = buttonContent;
 
   if (gamePage) {
-    return <Navigate to="/game" />;
+    return <Navigate to={`/games/${linkData.replaceAll(" ", "-")}`} />;
   }
 
   return (

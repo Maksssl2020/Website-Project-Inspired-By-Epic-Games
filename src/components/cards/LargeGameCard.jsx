@@ -33,19 +33,9 @@ function LargeGameCard({ gameData }) {
               {buttonContent}
             </button>
             <AddToWishlistButton
-              additionalStyling={[
-                "h-[50px]",
-                "xl:w-[175px]",
-                "hover:bg-custom-gray-100",
-                "hover:bg-opacity-40",
-                "hover:bg-custom-gray-100",
-                "hover:bg-opacity-40",
-                "lg:text-xs",
-                "lg:w-[150px]",
-                "max-lg:text-[10px]",
-                "max-lg:h-[40px]",
-                "max-sm:h-[35px]",
-              ]}
+              additionalStyling={
+                "h-[50px] xl:w-[175px] hover:bg-custom-gray-100 hover:bg-opacity-40 hover:bg-custom-gray-100 hover:bg-opacity-40 lg:text-xs lg:w-[150px] max-lg:text-[10px] max-lg:h-[40px] max-sm:h-[35px]"
+              }
             />
           </div>
         </div>
