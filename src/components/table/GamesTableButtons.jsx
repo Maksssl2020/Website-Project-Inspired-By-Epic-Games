@@ -10,17 +10,7 @@ function GamesTableButtons({ text, gamesData }) {
         <span className="ml-auto">
           <MainButton
             buttonContent="View More"
-            additionalStyling={[
-              "rounded-md",
-              "xl:w-[115px]",
-              "border-2",
-              "hover:bg-custom-gray-100",
-              "hover:bg-opacity-15",
-              "lg:w-[95px]",
-              "lg:text-sm",
-              "md:text-xs",
-              "max-sm:w-[110px]",
-            ]}
+            additionalStyling="rounded-md xl:w-[115px] border-2 hover:bg-custom-gray-100 hover:bg-opacity-15 lg:w-[95px] lg:text-sm md:text-xs max-sm:w-[110px]"
           />
         </span>
       </div>

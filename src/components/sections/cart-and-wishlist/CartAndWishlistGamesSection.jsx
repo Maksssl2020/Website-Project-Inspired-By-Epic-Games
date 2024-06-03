@@ -26,6 +26,7 @@ function CartAndWishlistGamesSection({ sectionTitle, gamesData, sidePanel }) {
           <li key={index}>
             <CartAndWishlistGameCard
               gameData={game}
+              sectionTitle={sectionTitle}
               onRemove={() => removeGameFromList(index)}
             />
           </li>
@@ -34,10 +35,10 @@ function CartAndWishlistGamesSection({ sectionTitle, gamesData, sidePanel }) {
     ) : (
       <div className="flex h-[500px] w-full flex-col items-center justify-center space-y-6">
         <SadIcon />
-        <h1 className="text-5xl text-custom-white">
+        <h1 className="text-sm text-custom-white xs:text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl">
           {`You haven't added anything to your ${sectionTitle.toLowerCase()} yet!`}
         </h1>
-        <p className="text-2xl text-custom-gray-100">
+        <p className="text-custom-gray-100 max-sm:text-sm sm:text-lg md:text-xl">
           Go to the shop and add games
         </p>
       </div>

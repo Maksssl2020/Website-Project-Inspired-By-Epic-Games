@@ -29,13 +29,7 @@ function CartGamesSummaryPanel({ gamesData }) {
       </div>
       <MainButton
         buttonContent={"CHECK OUT"}
-        additionalStyling={[
-          "bg-custom-emerald",
-          "py-2",
-          "h-[50px]",
-          "mt-4",
-          "w-full",
-        ]}
+        additionalStyling="bg-custom-emerald py-2 h-[50px] mt-4 w-full"
         link={"/payment"}
         state={{ gamesData: gamesData }}
       />

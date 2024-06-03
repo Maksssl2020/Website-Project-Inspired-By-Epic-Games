@@ -3,7 +3,7 @@ import React from "react";
 function PlusInCircleIcon() {
   return (
     <svg
-      className="h-6 w-6 max-lg:h-5 max-lg:w-5"
+      className="size-6 max-lg:size-5"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"

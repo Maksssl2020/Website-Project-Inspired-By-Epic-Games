@@ -4,6 +4,7 @@ import GameImage from "./GameImage.jsx";
 import { Navigation, Pagination } from "swiper/modules";
 import SidePanel from "../../game-page-side-panel/SidePanel.jsx";
 import TitleSection from "../../game-page-title-section/TitleSection.jsx";
+import GameRequirementsInfo from "../../game-system-requirements/GameRequirementsInfo.jsx";
 
 function GameImagesSlider({ gameData }) {
   const {
@@ -18,10 +19,9 @@ function GameImagesSlider({ gameData }) {
   } = gameData;
 
   return (
-    <div>
-      <TitleSection title={title} ratings={ratings} />
+    <div className="max-3xs:w-[350px] 3xs:w-[400px] sm:w-[500px] lg:w-[700px] xl:w-[900px] 2xl:w-[1050px]">
       <div className="mt-4 flex max-md:flex-col">
-        <div className="max-sm:w-[400px] sm:w-[500px] lg:w-[700px] xl:w-[900px] 2xl:w-[1050px]">
+        <div className="w-full">
           <Swiper
             slidesPerView={1}
             spaceBetween={0}
@@ -38,19 +38,21 @@ function GameImagesSlider({ gameData }) {
             ))}
           </Swiper>
         </div>
-
-        <div>
-          <SidePanel
-            logo={logo}
-            title={title}
-            discount={discount}
-            price={price}
-            additionalInfo={additionalInfo}
-          />
-        </div>
       </div>
-      <div className="rounded-lg border-2 border-custom-emerald p-4 text-custom-white max-xl:-translate-y-14 max-lg:-translate-y-36 max-md:mt-8 max-md:-translate-y-0 max-md:text-[14px] max-sm:w-[400px] sm:w-[500px] md:w-[500px] md:text-sm lg:w-[700px] xl:mt-8 xl:w-[900px] xl:text-lg 2xl:w-[1050px] 2xl:text-xl">
+      <div className="md:hidden">
+        <SidePanel
+          logo={logo}
+          title={title}
+          discount={discount}
+          price={price}
+          additionalInfo={additionalInfo}
+        />
+      </div>
+      <div className="mt-8 rounded-lg border-2 border-custom-emerald p-4 text-custom-white max-md:text-[14px] 2xl:text-xl">
         {description}
+      </div>
+      <div className="mt-8">
+        <GameRequirementsInfo />
       </div>
     </div>
   );

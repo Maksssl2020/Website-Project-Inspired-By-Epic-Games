@@ -40,12 +40,7 @@ function PaymentSummaryPanel({ cartGames }) {
       <div className="mt-6 text-custom-white">
         <MainButton
           buttonContent="SUBMIT YOUR ORDER"
-          additionalStyling={[
-            "bg-custom-emerald",
-            "w-full",
-            "h-[50px]",
-            "font-medium",
-          ]}
+          additionalStyling="bg-custom-emerald w-full h-[50px] font-medium"
           link={"/"}
         />
       </div>

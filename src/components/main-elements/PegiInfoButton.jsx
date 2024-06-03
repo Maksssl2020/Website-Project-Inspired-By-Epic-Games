@@ -5,7 +5,7 @@ function PegiInfoButton({ pegiInfo }) {
   const { pegiImage, pegiTitle, pegiDescription } = pegiInfo;
 
   return (
-    <button className="rounded-lg border-2 border-custom-white hover:border-custom-emerald">
+    <button className="rounded-lg border-2 border-custom-white transition-colors duration-300 hover:border-custom-emerald">
       <Link
         to="https://www.globalratings.com/ratingsguide.aspx#pegi"
         target="_blank"

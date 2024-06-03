@@ -9,7 +9,7 @@ function Wishlist() {
     <CartAndWishlistGamesProvider>
       <div className="mx-2 my-10 flex w-auto flex-col items-center 2xs:mx-20">
         <CartAndWishlistGamesSection
-          sectionTitle={"Wishlist"}
+          sectionTitle="Wishlist"
           gamesData={wishlistGamesData}
           sidePanel={
             <FiltersPanel

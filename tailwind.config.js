@@ -20,6 +20,15 @@ export default {
         "2xs": "549px",
         "3xs": "480px",
       },
+      keyframes: {
+        spin: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+      },
+      animation: {
+        "spin-once": "spin 0.5s ease-in-out",
+      },
     },
   },
   plugins: [],

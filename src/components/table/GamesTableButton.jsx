@@ -13,7 +13,7 @@ function GamesTableButton({ buttonContent }) {
   return (
     <button
       onClick={() => setGamePage(true)}
-      className="group flex w-full items-center gap-2 rounded-lg border-2 border-transparent px-3 py-3 hover:border-custom-emerald hover:bg-custom-gray-300 max-sm:h-[64px] sm:h-[64px] md:h-[64px] md:text-sm lg:h-[80px] xl:h-[100px] 2xl:h-[160px]"
+      className="group flex w-full items-center gap-2 rounded-lg border-2 border-transparent px-3 py-3 transition-colors duration-300 hover:border-custom-emerald hover:bg-custom-gray-300 max-sm:h-[64px] sm:h-[64px] md:h-[64px] md:text-sm lg:h-[80px] xl:h-[100px] 2xl:h-[160px]"
     >
       <img
         className="inset-0 h-full rounded-lg transition-transform ease-in-out group-hover:scale-110"

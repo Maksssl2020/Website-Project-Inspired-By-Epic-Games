@@ -21,14 +21,7 @@ function SignInSection() {
           />
           <MainButton
             buttonContent={"CONTINUE"}
-            additionalStyling={[
-              "text-custom-white",
-              "bg-custom-emerald",
-              "mt-10",
-              "h-[60px]",
-              "font-bold",
-              "w-full",
-            ]}
+            additionalStyling="text-custom-white bg-custom-emerald mt-10 h-[60px] font-bold w-full"
             link="/account"
           />
           <ImageButtons />

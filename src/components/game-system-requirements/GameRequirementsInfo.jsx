@@ -20,7 +20,7 @@ function GameRequirementsInfo() {
   ];
 
   return (
-    <div className="flex flex-col rounded-lg border-2 border-custom-emerald p-4 max-lg:-translate-y-28 max-md:-translate-y-0 max-sm:w-[400px] sx:mt-8 sm:w-[500px] md:w-[500px] lg:w-[700px] xl:mt-8 xl:w-[900px] 2xl:w-[1050px]">
+    <div className="flex flex-col rounded-lg border-2 border-custom-emerald p-4 xl:mt-8">
       <div className="self-center">
         <h2 className="w-full text-custom-white sm:text-lg xl:text-2xl">
           System Requirements

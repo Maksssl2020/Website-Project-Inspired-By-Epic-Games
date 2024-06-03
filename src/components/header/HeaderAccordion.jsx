@@ -90,12 +90,7 @@ function HeaderAccordion() {
           {buttonsData.map((data, index) => (
             <MainButton
               buttonContent={data.buttonContent}
-              additionalStyling={[
-                "bg-custom-gray-300",
-                "w-full",
-                "h-[50px]",
-                "items-start",
-              ]}
+              additionalStyling="bg-custom-gray-300 w-full h-[50px] items-start"
               link={data.buttonLink}
               onClickAction={handleAccordionClick}
               key={index}

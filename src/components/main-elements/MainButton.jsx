@@ -3,16 +3,12 @@ import { Link } from "react-router-dom";
 
 function MainButton({
   buttonContent,
-  additionalStyling,
+  additionalStyling = "",
   link = "",
   state = undefined,
   onClickAction = null,
 }) {
-  let buttonStyle = "rounded-lg px-2 py-1 hover:border-custom-emerald";
-
-  if (Array.isArray(additionalStyling)) {
-    additionalStyling.forEach((style) => (buttonStyle += ` ${style}`));
-  }
+  let buttonStyle = `rounded-lg px-2 py-1 hover:border-custom-emerald transition-colors duration-300 ${additionalStyling}`;
 
   return (
     <Link to={link} state={state}>

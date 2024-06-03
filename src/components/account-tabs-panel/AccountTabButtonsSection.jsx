@@ -13,33 +13,67 @@ import SquaresIcon from "./icons/SquaresIcon.jsx";
 import StorefrontIcon from "./icons/StorefrontIcon.jsx";
 import StarIcon from "./icons/StarIcon.jsx";
 
+const accountTabButtonsData = [
+  {
+    tabData: "ACCOUNT SETTINGS",
+    tabIcon: <UserIcon />,
+  },
+  {
+    tabData: "EMAIL PREFERENCES",
+    tabIcon: <IconBell />,
+  },
+  {
+    tabData: "PAYMENT MANAGEMENT",
+    tabIcon: <DollarIcon />,
+  },
+  {
+    tabData: "TRANSACTIONS",
+    tabIcon: <ClockIcon />,
+  },
+  {
+    tabData: "SUBSCRIPTIONS",
+    tabIcon: <TicketIcon />,
+  },
+  {
+    tabData: "SECURITY",
+    tabIcon: <LockIcon />,
+  },
+  {
+    tabData: "IN-GAME CURRENCY",
+    tabIcon: <BanknotesIcon />,
+  },
+  {
+    tabData: "PARENTAL CONTROLS",
+    tabIcon: <ShieldIcon />,
+  },
+  {
+    tabData: "EULA HISTORY",
+    tabIcon: <DocumentIcon />,
+  },
+  {
+    tabData: "APPS AND ACCOUNTS",
+    tabIcon: <SquaresIcon />,
+  },
+  {
+    tabData: "MARKETPLACE",
+    tabIcon: <StorefrontIcon />,
+  },
+  {
+    tabData: "REDEEM CODE",
+    tabIcon: <StarIcon />,
+  },
+];
+
 function AccountTabButtonsSection() {
   return (
     <div className="grid h-full w-auto grid-rows-12">
-      <AccountTabButton tabData={"ACCOUNT SETTINGS"} tabIcon={<UserIcon />} />
-      <AccountTabButton tabData={"EMAIL PREFERENCES"} tabIcon={<IconBell />} />
-      <AccountTabButton
-        tabData={"PAYMENT MANAGEMENT"}
-        tabIcon={<DollarIcon />}
-      />
-      <AccountTabButton tabData={"TRANSACTIONS"} tabIcon={<ClockIcon />} />
-      <AccountTabButton tabData={"SUBSCRIPTIONS"} tabIcon={<TicketIcon />} />
-      <AccountTabButton tabData={"SECURITY"} tabIcon={<LockIcon />} />
-      <AccountTabButton
-        tabData={"IN-GAME CURRENCY"}
-        tabIcon={<BanknotesIcon />}
-      />
-      <AccountTabButton
-        tabData={"PARENTAL CONTROLS"}
-        tabIcon={<ShieldIcon />}
-      />
-      <AccountTabButton tabData={"EULA HISTORY"} tabIcon={<DocumentIcon />} />
-      <AccountTabButton
-        tabData={"APPS AND ACCOUNTS"}
-        tabIcon={<SquaresIcon />}
-      />
-      <AccountTabButton tabData={"MARKETPLACE"} tabIcon={<StorefrontIcon />} />
-      <AccountTabButton tabData={"REDEEM CODE"} tabIcon={<StarIcon />} />
+      {accountTabButtonsData.map((data, index) => (
+        <AccountTabButton
+          tabData={data.tabData}
+          tabIcon={data.tabIcon}
+          key={index}
+        />
+      ))}
     </div>
   );
 }

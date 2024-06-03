@@ -3,7 +3,7 @@ import React from "react";
 function UserIcon({ onClickAction = null }) {
   return (
     <svg
-      className="size-[30px] rounded-full bg-current hover:bg-custom-emerald"
+      className="size-[30px] rounded-full bg-current transition-colors duration-300 hover:bg-custom-emerald"
       fill="none"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"

@@ -16,7 +16,7 @@ function AddToWishlistButton({ additionalStyling }) {
   }
 
   let style =
-    "flex items-center justify-center gap-1 rounded-lg border-2 text-sm uppercase hover:border-custom-emerald".concat(
+    "flex items-center justify-center gap-1 rounded-lg border-2 text-sm uppercase transition-colors duration-300 hover:border-custom-emerald".concat(
       " ",
       additionalStyling,
     );
@@ -25,15 +25,11 @@ function AddToWishlistButton({ additionalStyling }) {
     <button className={style} onClick={handleAddToWishlist}>
       <div className="relative">
         <span
-          className={`absolute inset-0 self-center ${isAnimating ? "visible animate-spin stroke-custom-white" : "stroke-none"}`}
+          className={`absolute inset-0 self-center ${isAnimating ? "animate-spin stroke-custom-white" : "stroke-none"}`}
         >
           <PlusInCircleIcon />
         </span>
-        <span
-          className={
-            isAnimating ? "stroke-none" : "visible stroke-custom-white"
-          }
-        >
+        <span className={isAnimating ? "stroke-none" : "stroke-custom-white"}>
           {isInWishlist ? <CheckCircleIcon /> : <PlusInCircleIcon />}
         </span>
       </div>

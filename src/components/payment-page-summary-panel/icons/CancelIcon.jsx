@@ -3,7 +3,7 @@ import React from "react";
 function CancelIcon() {
   return (
     <svg
-      className="h-[35px] w-[35px] hover:text-custom-emerald"
+      className="hover:animate-spin-once h-[35px] w-[35px] hover:text-custom-emerald"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"

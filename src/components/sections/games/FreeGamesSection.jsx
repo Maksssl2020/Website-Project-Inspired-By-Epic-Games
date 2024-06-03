@@ -32,17 +32,7 @@ function FreeGamesSection() {
           <span className="ml-auto rounded-lg">
             <MainButton
               buttonContent="View More"
-              additionalStyling={[
-                "text-lg",
-                "w-[150px]",
-                "h-[45px]",
-                "border-2",
-                "hover:bg-custom-gray-100",
-                "hover:bg-opacity-15",
-                "max-lg:w-[115px]",
-                "max-lg:h-[35px]",
-                "max-lg:text-sm",
-              ]}
+              additionalStyling="text-lg w-[150px] h-[45px] border-2 hover:bg-custom-gray-100 hover:bg-opacity-15 max-lg:w-[115px] max-lg:h-[35px] max-lg:text-sm"
             />
           </span>
         </div>

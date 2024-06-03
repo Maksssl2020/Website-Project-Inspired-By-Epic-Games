@@ -8,7 +8,7 @@ function PaymentMethodButton({ paymentData, isActive, onClick }) {
   return (
     <button
       onClick={onClick}
-      className={`flex h-[60px] w-full items-center space-x-4 rounded-lg border-2 bg-custom-gray-300 px-4 py-2 text-custom-white ${isActive ? "border-custom-emerald" : "border-transparent"}`}
+      className={`flex h-[60px] w-full items-center space-x-4 rounded-lg border-2 bg-custom-gray-300 stroke-custom-white px-4 py-2 text-custom-white ${isActive ? "border-custom-emerald" : "border-transparent"}`}
     >
       {isActive ? <FilledCheckCircleIcon /> : <CheckCircleIcon />}
       <div className="flex h-[40px] w-[80px] items-center justify-center rounded-lg border">

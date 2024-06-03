@@ -9,7 +9,7 @@ function Cart() {
     <CartAndWishlistGamesProvider>
       <div className="mx-2 my-10 flex flex-col items-center 2xs:mx-20">
         <CartAndWishlistGamesSection
-          sectionTitle={"Cart"}
+          sectionTitle="Cart"
           gamesData={cartGamesData}
           sidePanel={<CartGamesSummaryPanel gamesData={cartGamesData} />}
         />

@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Ratings from "./Ratings.jsx";
 
 function TitleSection({ title, ratings }) {
+  const [activeButtonIndex, setActiveButtonIndex] = useState(0);
   const additionalSectionsNames = ["Overview", "DLC", "FAQ", "Reviews"];
+
+  function handleActiveButtonClick(buttonIndex) {
+    setActiveButtonIndex(buttonIndex);
+  }
 
   return (
     <div>
@@ -13,9 +18,14 @@ function TitleSection({ title, ratings }) {
         <Ratings gameRatingScore={ratings} />
       </p>
       <ul className="mt-6 flex gap-4 text-custom-gray-100 max-md:text-sm lg:text-lg 2xl:text-xl">
-        {additionalSectionsNames.map((sectionName) => (
-          <li className="border-b-2 border-transparent hover:cursor-pointer hover:border-custom-emerald">
-            {sectionName}
+        {additionalSectionsNames.map((sectionName, index) => (
+          <li key={index}>
+            <button
+              className={`border-b-2 transition-colors duration-300 hover:border-custom-emerald ${activeButtonIndex === index ? "border-custom-emerald" : "border-transparent"}`}
+              onClick={() => handleActiveButtonClick(index)}
+            >
+              {sectionName}
+            </button>
           </li>
         ))}
       </ul>

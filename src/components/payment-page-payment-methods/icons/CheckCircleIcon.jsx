@@ -3,7 +3,7 @@ import React from "react";
 function CheckCircleIcon() {
   return (
     <svg
-      className="size-6"
+      className="size-6 max-lg:size-5"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"

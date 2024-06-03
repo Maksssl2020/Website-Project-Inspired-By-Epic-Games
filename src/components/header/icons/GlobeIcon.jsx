@@ -3,7 +3,7 @@ import React from "react";
 function GlobeIcon({ onClickAction = null }) {
   return (
     <svg
-      className="size-9 hover:cursor-pointer hover:stroke-custom-emerald"
+      className="size-9 transition-colors duration-300 hover:cursor-pointer hover:stroke-custom-emerald"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"

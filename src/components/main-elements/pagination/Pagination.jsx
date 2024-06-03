@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PaginationItem from "./PaginationItem.jsx";
 import ChevronLeftIcon from "../icons/ChevronLeftIcon.jsx";
 import ChevronRightIcon from "../icons/ChevronRightIcon.jsx";
@@ -13,8 +13,8 @@ function Pagination({ pagesMaxNumber }) {
     <div className="mt-8 flex w-full justify-center space-x-4 font-medium hover:outline-none">
       <div className="flex justify-center space-x-4 text-custom-gray-100">
         <ChevronLeftIcon />
-        {amountOfPaginationItems.map((number) => (
-          <PaginationItem key={number} pageNumber={number} />
+        {amountOfPaginationItems.map((number, index) => (
+          <PaginationItem key={index} pageNumber={number} />
         ))}
         <PaginationItem pageNumber="..." />
         <PaginationItem pageNumber={pagesMaxNumber} />
