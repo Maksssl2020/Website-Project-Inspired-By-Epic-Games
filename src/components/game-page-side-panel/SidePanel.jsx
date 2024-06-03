@@ -5,6 +5,7 @@ import GameInfo from "./GameInfo.jsx";
 
 function SidePanel({ gameData }) {
   const { logo, title, discount, price, additionalInfo } = gameData;
+  console.log(gameData);
 
   return (
     <div className="flex flex-col text-custom-white max-sm:text-sm  sm:text-lg md:ml-5 md:w-[225px] md:text-sm lg:w-[275px] xl:w-[320px]">

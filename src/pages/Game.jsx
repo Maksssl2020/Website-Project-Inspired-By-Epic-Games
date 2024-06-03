@@ -1,6 +1,5 @@
 import React from "react";
 import GameImagesSlider from "../components/slider/game-page-slider/GameImagesSlider.jsx";
-import GameRequirementsInfo from "../components/game-system-requirements/GameRequirementsInfo.jsx";
 import { gameFullData } from "../website-data/GameFullData.js";
 import { useParams } from "react-router-dom";
 import SidePanel from "../components/game-page-side-panel/SidePanel.jsx";

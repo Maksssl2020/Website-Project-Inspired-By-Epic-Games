@@ -40,13 +40,7 @@ function GameImagesSlider({ gameData }) {
         </div>
       </div>
       <div className="md:hidden">
-        <SidePanel
-          logo={logo}
-          title={title}
-          discount={discount}
-          price={price}
-          additionalInfo={additionalInfo}
-        />
+        <SidePanel gameData={gameData} />
       </div>
       <div className="mt-8 rounded-lg border-2 border-custom-emerald p-4 text-custom-white max-md:text-[14px] 2xl:text-xl">
         {description}
