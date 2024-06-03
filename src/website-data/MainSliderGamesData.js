@@ -41,7 +41,7 @@ export const MainSliderGamesData = [
     logoImage:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Assassin%27s_Creed_Valhalla_text_logo.svg/1280px-Assassin%27s_Creed_Valhalla_text_logo.svg.png",
     coverImage:
-      "https://cdn2.steamgriddb.com/thumb/92e046b3bfde21047600bbf9167b52a2.jpg",
+      "https://cdn2.steamgriddb.com/thumb/914179592aa3523210dd00c0bb030c30.jpg",
     title: "AC: Valhalla",
     description:
       "The player takes on the role of Eivor Varinsdottir, a Viking raider, as they lead their fellow Vikings against the Anglo-Saxon kingdoms.",

@@ -2,11 +2,11 @@ import React from "react";
 import MainButton from "../main-elements/MainButton.jsx";
 import AddToWishlistButton from "../main-elements/AddToWishlistButton.jsx";
 
-function SidePanelButtons() {
+function SidePanelButtons({ isGameFree }) {
   return (
     <div className="flex flex-col gap-4">
       <MainButton
-        buttonContent="BUY NOW"
+        buttonContent={isGameFree ? "PLAY NOW" : "BUY NOW"}
         additionalStyling="w-full h-[50px] bg-custom-emerald"
       />
       <MainButton

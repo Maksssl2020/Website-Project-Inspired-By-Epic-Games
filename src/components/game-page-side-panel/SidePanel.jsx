@@ -5,7 +5,8 @@ import GameInfo from "./GameInfo.jsx";
 
 function SidePanel({ gameData }) {
   const { logo, title, discount, price, additionalInfo } = gameData;
-  console.log(gameData);
+
+  let isGameFree = price === 0;
 
   return (
     <div className="flex flex-col text-custom-white max-sm:text-sm  sm:text-lg md:ml-5 md:w-[225px] md:text-sm lg:w-[275px] xl:w-[320px]">
@@ -16,11 +17,13 @@ function SidePanel({ gameData }) {
           alt={title}
         />
       </div>
-      <div className="mb-4 self-center">
+      <div
+        className={`mb-4 self-center ${isGameFree ? "text-lg font-bold uppercase" : ""}`}
+      >
         <GamePrice baseGamePrice={price} discount={discount} />
       </div>
       <div>
-        <SidePanelButtons />
+        <SidePanelButtons isGameFree={isGameFree} />
       </div>
       <div className="mt-8">
         <GameInfo gameData={additionalInfo} />

@@ -1,18 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import PegiInfoButton from "../../main-elements/PegiInfoButton.jsx";
 import MainButton from "../../main-elements/MainButton.jsx";
 import ExtendedGamePriceInfoLabel from "./ExtendedGamePriceInfoLabel.jsx";
+import { Navigate } from "react-router-dom";
 
 function CartAndWishlistGameCard({ gameData, sectionTitle, onAdd, onRemove }) {
+  const [gamePage, setGamePage] = useState(false);
   const { image, edition, title, pegiInfo } = gameData;
 
   let buttonContent =
     sectionTitle === "Cart" ? "MOVE TO WISHLIST" : "ADD TO CART";
 
+  if (gamePage) {
+    return <Navigate to={`/games/${title.replaceAll(" ", "-")}`} />;
+  }
+
   return (
     <div className="flex justify-between rounded-lg border-2 border-custom-emerald p-8 max-lg:flex-col max-3xs:w-full 3xs:w-[430px] xs:w-[500px] sm:w-[600px] md:w-[700px] lg:h-[385px] lg:w-[900px] 2xl:w-[1100px]">
       <div className="flex max-lg:flex-col">
-        <div className="relative  max-lg:mb-4 max-md:h-[115px] max-md:w-[85px] md:h-[135px] md:w-[100px] lg:h-[150px] lg:w-[115px] xl:h-[175px] xl:w-[130px]">
+        <div
+          onClick={() => setGamePage(true)}
+          className="relative  max-lg:mb-4 max-md:h-[115px] max-md:w-[85px] md:h-[135px] md:w-[100px] lg:h-[150px] lg:w-[115px] xl:h-[175px] xl:w-[130px]"
+        >
           <div className="absolute inset-0 rounded-lg border-2 border-transparent bg-transparent transition-colors duration-300 hover:cursor-pointer hover:border-custom-emerald hover:bg-custom-gray-100 hover:bg-opacity-20"></div>
           <img
             className="inset-0 h-full w-full self-center rounded-lg object-cover"

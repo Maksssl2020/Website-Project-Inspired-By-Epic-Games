@@ -4,7 +4,7 @@ import { Navigate } from "react-router-dom";
 
 function GameCard({ gameData }) {
   const [gamePage, setGamePage] = useState(false);
-  const { image, edition, title, discount, price } = gameData;
+  const { coverImage, edition, title, discount, price } = gameData;
 
   if (gamePage) {
     return <Navigate to={`/games/${title.replaceAll(" ", "-")}`} />;
@@ -18,7 +18,7 @@ function GameCard({ gameData }) {
       <div className="relative md:h-[202px] lg:h-[222px] xl:h-[242px] 2xl:h-[282px]">
         <img
           className="inset-0 h-full w-full rounded-md object-cover"
-          src={image}
+          src={coverImage}
           alt={`${title} - cover`}
         />
       </div>
