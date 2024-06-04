@@ -1,5 +1,5 @@
 import React from "react";
-import SignInSection from "../components/sing-in-section/SignInSection.jsx";
+import SignInSection from "../components/sections/sing-in/SignInSection.jsx";
 
 function SignIn() {
   return (

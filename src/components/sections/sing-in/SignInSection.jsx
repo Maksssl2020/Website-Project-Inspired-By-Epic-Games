@@ -1,7 +1,7 @@
 import React from "react";
-import ShopLogo from "../../assets/white-shop-logo.png";
-import MainButton from "../main-elements/MainButton.jsx";
-import ImageButtons from "../sign-in-buttons/ImageButtons.jsx";
+import ShopLogo from "../../../assets/white-shop-logo.png";
+import MainButton from "../../main-elements/MainButton.jsx";
+import ImageButtons from "../../sign-in-buttons/ImageButtons.jsx";
 
 function SignInSection() {
   return (
