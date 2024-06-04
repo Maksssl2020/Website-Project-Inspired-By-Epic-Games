@@ -1,0 +1,17 @@
+export const languagesData = [
+  "English",
+  "العربية",
+  "Deutsch",
+  "Español",
+  "Español (LA)",
+  "Français",
+  "Italiano",
+  "日本語",
+  "한국어",
+  "Polski",
+  "Português (Brasil)",
+  "ไทย",
+  "Türkçe",
+  "简体中文",
+  "繁體中文",
+];

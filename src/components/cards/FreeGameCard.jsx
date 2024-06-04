@@ -1,10 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
 import { calcSaleEndDate } from "../../helpers/DateCalculator.js";
 
 function FreeGameCard({ freeGameData }) {
   const [gamePage, setGamePage] = useState(false);
+  // const [saleEndDate, setSaleEndDate] = useState("");
   const { image, title } = freeGameData;
+
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setSaleEndDate(calcSaleEndDate());
+  //   }, 1000);
+  //
+  //   return () => clearInterval(interval);
+  // }, []);
 
   if (gamePage) {
     return <Navigate to={`/games/${title.replaceAll(" ", "-")}`} />;

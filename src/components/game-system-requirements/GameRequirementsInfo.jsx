@@ -26,7 +26,7 @@ function GameRequirementsInfo() {
           System Requirements
         </h2>
       </div>
-      <div className="grid grid-cols-2 font-medium max-md:mx-2 max-md:mt-2 max-md:text-[10px] md:text-xs lg:mx-4 lg:mt-10 lg:text-sm">
+      <div className="grid grid-cols-2 font-medium max-md:mx-2 max-md:mt-2 max-xs:text-[8px]  xs:text-[10px] md:text-xs lg:mx-4 lg:mt-10 lg:text-sm">
         <RequirementsList requirementsData={testMinReqData} reqType="Minimum" />
         <RequirementsList
           requirementsData={texsRecReqData}

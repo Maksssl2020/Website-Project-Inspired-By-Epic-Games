@@ -1,10 +1,15 @@
-import React from "react";
-import PlusInCircleIcon from "../main-elements/icons/PlusInCircleIcon.jsx";
+import React, { useState } from "react";
 import AddToWishlistButton from "../main-elements/AddToWishlistButton.jsx";
+import { Navigate } from "react-router-dom";
 
 function LargeGameCard({ gameData }) {
+  const [gamePage, setGamePage] = useState(false);
   const { wallpaperImage, logoImage, title, description, buttonContent } =
     gameData;
+
+  if (gamePage) {
+    return <Navigate to={`/games/${title.replaceAll(" ", "-")}`} />;
+  }
 
   return (
     <div className="flex rounded-lg font-medium text-custom-white ">
@@ -29,7 +34,10 @@ function LargeGameCard({ gameData }) {
             {description}
           </div>
           <div className="flex gap-4">
-            <button className="rounded-md bg-custom-emerald text-custom-white max-lg:h-[40px] max-lg:w-[100px] max-lg:text-xs max-sm:h-[35px] lg:w-[125px] lg:text-sm xl:w-[150px]">
+            <button
+              onClick={() => setGamePage(true)}
+              className="rounded-md bg-custom-emerald text-custom-white max-lg:h-[40px] max-lg:w-[100px] max-lg:text-xs max-sm:h-[35px] lg:w-[125px] lg:text-sm xl:w-[150px]"
+            >
               {buttonContent}
             </button>
             <AddToWishlistButton

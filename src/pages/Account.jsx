@@ -1,7 +1,7 @@
 import React from "react";
 import AccountSettingsSection from "../components/account-main-section/AccountSettingsSection.jsx";
 import AccountTabButtonsSection from "../components/account-tabs-panel/AccountTabButtonsSection.jsx";
-import AccountAccordion from "../components/account-main-section/AccountAccordion.jsx";
+import AccountAccordion from "../components/account-tabs-panel/AccountAccordion.jsx";
 
 function Account() {
   return (

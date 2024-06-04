@@ -2,14 +2,13 @@ import React, { useEffect, useRef, useState } from "react";
 import MenuIcon from "./icons/MenuIcon.jsx";
 import CancelIcon from "../payment-page-summary-panel/icons/CancelIcon.jsx";
 import StoreTextIcon from "./icons/StoreTextIcon.jsx";
-import ContentList from "./ContentList.jsx";
-import GlobeIcon from "./icons/GlobeIcon.jsx";
 import { Link } from "react-router-dom";
 import UserIcon from "./icons/UserIcon.jsx";
 import MainButton from "../main-elements/MainButton.jsx";
+import GlobIconAccordionSmallScreens from "./GlobIconAccordionSmallScreens.jsx";
 
 function HeaderAccordion() {
-  const [accordionOpen, setAccordionOpen] = React.useState(false);
+  const [accordionOpen, setAccordionOpen] = useState(false);
   const [maxHeight, setMaxHeight] = useState("0px");
   const contentRef = useRef(null);
 
@@ -65,32 +64,27 @@ function HeaderAccordion() {
               <StoreTextIcon />
             </Link>
           </button>
-          <ContentList
-            components={[
-              <GlobeIcon key="glob-icon" />,
-              <Link to="login" key="link-to-login-page">
-                <UserIcon
-                  key={"user-icon"}
-                  onClickAction={handleAccordionClick}
-                />
-              </Link>,
-            ]}
-            additionalStyling={[
-              "text-custom-white",
-              "ml-auto",
-              "mr-4",
-              "gap-0",
-            ]}
-          />
-          <button className="h-[35px] w-[35px]" onClick={handleAccordionClick}>
-            <CancelIcon />
-          </button>
+          <div className="ml-auto flex items-center gap-2">
+            <GlobIconAccordionSmallScreens />
+            <Link to="login" key="link-to-login-page">
+              <UserIcon
+                key={"user-icon"}
+                onClickAction={handleAccordionClick}
+              />
+            </Link>
+            <button
+              className="ml-2 h-[35px] w-[35px]"
+              onClick={handleAccordionClick}
+            >
+              <CancelIcon />
+            </button>
+          </div>
         </div>
-        <div className="mt-4 flex flex-col space-y-4">
+        <div className="mx-4 mt-4 flex flex-col space-y-4">
           {buttonsData.map((data, index) => (
             <MainButton
               buttonContent={data.buttonContent}
-              additionalStyling="bg-custom-gray-300 w-full h-[50px] items-start"
+              additionalStyling="bg-custom-gray-300 w-full h-[50px] flex items-center"
               link={data.buttonLink}
               onClickAction={handleAccordionClick}
               key={index}

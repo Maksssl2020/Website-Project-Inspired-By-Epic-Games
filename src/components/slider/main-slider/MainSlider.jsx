@@ -6,6 +6,7 @@ import { MainSliderGamesData } from "../../../website-data/MainSliderGamesData.j
 import LargeGameCard from "../../cards/LargeGameCard.jsx";
 import MainSliderButton from "./MainSliderButton.jsx";
 import { Autoplay } from "swiper/modules";
+import React from "react";
 
 function MainSlider() {
   return (

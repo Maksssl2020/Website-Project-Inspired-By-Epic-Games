@@ -5,7 +5,7 @@ export const signInButtonsData = [
   },
   {
     image:
-      "https://scontent-waw2-1.xx.fbcdn.net/v/t39.30808-6/352234250_9407179106019698_7426267769582954875_n.png?_nc_cat=1&ccb=1-7&_nc_sid=5f2048&_nc_ohc=HnYhJ3QS998Q7kNvgG5MdOS&_nc_ht=scontent-waw2-1.xx&oh=00_AYAISQVbSGQt0laK2c1diwNYATuDI1jHMxueOhHRYYXdrw&oe=66526D51",
+      "https://cdn.vox-cdn.com/thumbor/xJcOqsmuDDiBSbO4khF5DVm02rI=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/24674044/playstation_showcase_may_2023_logo.jpg",
     imageTitle: "playstation-image",
   },
   {
@@ -24,7 +24,7 @@ export const signInButtonsData = [
   },
   {
     image:
-      "https://scontent-waw2-1.xx.fbcdn.net/v/t39.30808-6/370053646_663880819178741_2023020329710378963_n.png?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=xvYBQKPIHkQQ7kNvgGzeieq&_nc_ht=scontent-waw2-1.xx&oh=00_AYCGVH-tAECJcAmfXUJfEAMwyQ_j6u7b_mD60i6Nap4KLg&oe=66528F4F",
+      "https://static1.howtogeekimages.com/wordpress/wp-content/uploads/2021/06/google_g_hero.jpg",
     imageTitle: "google-image",
   },
   {

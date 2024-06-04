@@ -14,7 +14,7 @@ function Game() {
     <div className="my-10 flex flex-col lg:mx-20">
       <div className="self-center">
         <div>
-          <TitleSection title={title} ratings={gameData.ratings} />
+          <TitleSection title={gameTitle} ratings={gameData.ratings} />
         </div>
         <div className="flex self-center">
           <GameImagesSlider gameData={gameData} />

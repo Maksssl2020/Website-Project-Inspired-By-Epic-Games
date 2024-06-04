@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import AccountTabButton from "./AccountTabButton.jsx";
 import UserIcon from "./icons/UserIcon.jsx";
 import IconBell from "./icons/IconBell.jsx";
@@ -65,14 +65,22 @@ const accountTabButtonsData = [
 ];
 
 function AccountTabButtonsSection() {
+  const [activeButtonIndex, setActiveButtonIndex] = useState(0);
+
+  function handleActiveButtonClick(index) {
+    setActiveButtonIndex(index);
+  }
+
   return (
     <div className="grid h-full w-auto grid-rows-12">
       {accountTabButtonsData.map((data, index) => (
-        <AccountTabButton
-          tabData={data.tabData}
-          tabIcon={data.tabIcon}
-          key={index}
-        />
+        <p onClick={() => handleActiveButtonClick(index)} key={index}>
+          <AccountTabButton
+            tabData={data.tabData}
+            tabIcon={data.tabIcon}
+            isActive={activeButtonIndex === index}
+          />
+        </p>
       ))}
     </div>
   );

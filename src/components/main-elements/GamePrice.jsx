@@ -35,7 +35,9 @@ function GamePrice({ baseGamePrice, discount, pricePosition = null }) {
     <div className="flex items-center gap-2">
       {discountInfo}
       {pricePosition === "ml-auto" ? (
-        <div className={pricePosition}>
+        <div
+          className={`${pricePosition} ${gamePrice === "Free" ? "font-bold" : ""}`}
+        >
           {gamePrice} {gamePriceAfterDiscount}
         </div>
       ) : (

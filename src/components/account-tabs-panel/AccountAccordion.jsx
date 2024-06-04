@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import UserIcon from "../account-tabs-panel/icons/UserIcon.jsx";
+import UserIcon from "./icons/UserIcon.jsx";
 import ChevronDown from "../filters-panel/icons/ChevronDown.jsx";
-import AccountTabButtonsSection from "../account-tabs-panel/AccountTabButtonsSection.jsx";
+import AccountTabButtonsSection from "./AccountTabButtonsSection.jsx";
 
 function AccountAccordion() {
   const [isActive, setIsActive] = useState(false);
@@ -33,9 +33,10 @@ function AccountAccordion() {
       <div
         ref={contentRef}
         style={{ maxHeight }}
-        className={`${isActive ? "border-custom-emerald" : "border-transparent"} overflow-hidden border-b duration-300 ease-in-out`}
+        className={`${isActive ? "border-custom-emerald" : "overflow-hidden border-transparent"} border-b duration-300 ease-in-out`}
       >
         <AccountTabButtonsSection />
+        <p className="h-1 w-full"></p>
       </div>
     </div>
   );

@@ -1,17 +1,18 @@
 export function calcElapsedDays(date) {
-  let publicationDate = new Date(Date.parse(date));
-  let today = new Date(Date.now());
-  let differenceInTime = today.getTime() - publicationDate.getTime();
-  let differendeInDays = Math.floor(differenceInTime / (1000 * 3600 * 24));
+  const publicationDate = new Date(Date.parse(date));
+  const today = new Date();
+  const differenceInTime = today.getTime() - publicationDate.getTime();
+  const differenceInDays = Math.floor(differenceInTime / (1000 * 3600 * 24));
 
-  return `${differendeInDays}D AGO`;
+  return `${differenceInDays}D AGO`;
 }
 
 export function calcSaleEndDate() {
-  const now = new Date(Date.now());
-  const day = now.getDay() + 7;
-  const month = now.getMonth();
-  const year = now.getFullYear();
+  let now = new Date();
+
+  let day = now.getDate() + 7;
+  let month = now.getMonth() + 1;
+  let year = now.getFullYear();
 
   return `${day} / ${month} / ${year} at 08:00 PM`;
 }

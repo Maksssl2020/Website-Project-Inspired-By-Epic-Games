@@ -13,7 +13,7 @@ function GameCard({ gameData }) {
   return (
     <div
       onClick={() => setGamePage(true)}
-      className="rounded-lg border-2 border-transparent font-medium transition-transform ease-in-out hover:-translate-y-1 hover:scale-105 hover:cursor-pointer hover:border-custom-emerald md:w-[132px] lg:w-[152px] xl:w-[172px] 2xl:w-[212px]"
+      className="h-full rounded-lg border-2 border-transparent font-medium transition-transform ease-in-out hover:-translate-y-1 hover:scale-105 hover:cursor-pointer hover:border-custom-emerald md:w-[132px] lg:w-[152px] xl:w-[172px] 2xl:w-[212px]"
     >
       <div className="relative md:h-[202px] lg:h-[222px] xl:h-[242px] 2xl:h-[282px]">
         <img

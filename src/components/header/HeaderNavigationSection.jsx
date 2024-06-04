@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import StoreTextIcon from "./icons/StoreTextIcon.jsx";
 import ContentList from "./ContentList.jsx";
@@ -7,9 +7,11 @@ import SearchBar from "./SearchBar.jsx";
 import GlobeIcon from "./icons/GlobeIcon.jsx";
 import UserIcon from "./icons/UserIcon.jsx";
 import Badge from "../main-elements/Badge.jsx";
+import GlobIconAccordionLargeScreens from "./GlobIconAccordionLargeScreens.jsx";
 
 function HeaderNavigationSection() {
   const [activeButtonIndex, setActiveButtonIndex] = React.useState(0);
+  const [isGlobAccordionVisible, setIsGlobAccordionVisible] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -33,6 +35,9 @@ function HeaderNavigationSection() {
         setActiveButtonIndex(-1);
     }
   }, [location.pathname]);
+
+  const handleAccordionMouseEnter = () => setIsGlobAccordionVisible(true);
+  const handleAccordionMouseLeave = () => setIsGlobAccordionVisible(false);
 
   return (
     <>
@@ -87,7 +92,20 @@ function HeaderNavigationSection() {
               />,
               "mr-4",
             ],
-            <GlobeIcon key={"globe-icon"} />,
+            <div className="relative flex size-9" key={"glob"}>
+              <button
+                className="flex rounded-full"
+                onMouseEnter={handleAccordionMouseEnter}
+                onMouseLeave={handleAccordionMouseLeave}
+              >
+                <GlobeIcon key={"globe-icon"} />
+              </button>
+              <GlobIconAccordionLargeScreens
+                isVivible={isGlobAccordionVisible}
+                onMouseEnter={handleAccordionMouseEnter}
+                onMouseLeave={handleAccordionMouseLeave}
+              />
+            </div>,
             <Link to="login" key="link-to-login-page">
               <UserIcon key={"user-icon"} />
             </Link>,

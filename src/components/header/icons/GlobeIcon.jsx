@@ -1,9 +1,9 @@
 import React from "react";
 
-function GlobeIcon({ onClickAction = null }) {
+function GlobeIcon({ onClickAction = null, size = "9" }) {
   return (
     <svg
-      className="size-9 transition-colors duration-300 hover:cursor-pointer hover:stroke-custom-emerald"
+      className={`size-${size} transition-colors duration-300 hover:cursor-pointer hover:stroke-custom-emerald`}
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
