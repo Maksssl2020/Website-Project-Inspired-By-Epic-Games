@@ -1,6 +1,5 @@
 import React from "react";
 import AccountInputField from "./AccountInputField.jsx";
-import { TextField } from "@mui/material";
 
 function AccountInformationTab() {
   const informationTabFieldsData = [
