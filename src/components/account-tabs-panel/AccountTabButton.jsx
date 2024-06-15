@@ -1,5 +1,4 @@
 import React from "react";
-import UserIcon from "./icons/UserIcon.jsx";
 
 function AccountTabButton({ tabData, tabIcon, isActive }) {
   return (

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import CreditCardIcon from "./icons/CreditCardIcon.jsx";
 import PaypalIcon from "./icons/PaypalIcon.jsx";
 import OnlineBankingPlIcon from "./icons/OnlineBankingPlIcon.jsx";

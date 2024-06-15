@@ -6,7 +6,7 @@ function SmallNewsCard({ newsData }) {
 
   return (
     <div className="grid h-[150px] w-full grid-cols-[auto_1fr] items-center gap-4 border-t border-custom-emerald px-4">
-      <div className="relative h-[115px] w-[150px] 3xs:w-[200px]">
+      <div className="relative h-[115px] w-[200px] max-sm:h-[100px] max-sm:w-[175px]">
         <div className="absolute inset-0 rounded-lg hover:cursor-pointer hover:bg-custom-gray-100 hover:bg-opacity-20"></div>
         <img
           className=" h-full rounded-lg object-cover"

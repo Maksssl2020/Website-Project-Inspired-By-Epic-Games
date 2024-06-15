@@ -1,8 +1,6 @@
 import React from "react";
 import GameCard from "../../cards/GameCard.jsx";
-import { GamesWithDiscount } from "../../../website-data/GamesCardData.js";
 import FiltersPanel from "../../filters-panel/FiltersPanel.jsx";
-import FilterButton from "../../filters-panel/FilterButton.jsx";
 import ChevronDown from "../../filters-panel/icons/ChevronDown.jsx";
 import ChevronDoubleDown from "../../filters-panel/icons/ChevronDoubleDown.jsx";
 import Pagination from "../../main-elements/pagination/Pagination.jsx";
@@ -11,10 +9,10 @@ import { gameFullData } from "../../../website-data/GameFullData.js";
 
 function BrowseGamesSection() {
   return (
-    <div className="flex w-auto flex-col">
-      <div className="ml-1 mr-auto flex">
+    <div className="flex w-auto flex-col max-xs:items-center">
+      <div className="flex xs:ml-3">
         <p className="font-medium text-custom-gray-100">SHOW:</p>
-        <p className="relative z-10 ml-4 flex text-custom-white hover:cursor-pointer">
+        <p className="relative ml-4 flex text-custom-white hover:cursor-pointer">
           <p>ALL</p>
           <ChevronDown />
         </p>

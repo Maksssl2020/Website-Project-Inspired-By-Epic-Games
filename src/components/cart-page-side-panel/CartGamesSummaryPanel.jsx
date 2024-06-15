@@ -1,7 +1,6 @@
 import React from "react";
 import PriceInfoLabel from "./PriceInfoLabel.jsx";
 import { calcSummaryPrices } from "../../helpers/PriceCalculator.js";
-import { Link } from "react-router-dom";
 import MainButton from "../main-elements/MainButton.jsx";
 
 function CartGamesSummaryPanel({ gamesData }) {

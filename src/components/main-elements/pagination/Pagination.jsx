@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import PaginationItem from "./PaginationItem.jsx";
 import ChevronLeftIcon from "../icons/ChevronLeftIcon.jsx";
 import ChevronRightIcon from "../icons/ChevronRightIcon.jsx";

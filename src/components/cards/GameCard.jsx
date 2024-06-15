@@ -23,11 +23,11 @@ function GameCard({ gameData }) {
         />
       </div>
       <div className="mt-1 sm:text-[13px] md:text-[15px]">
-        <p className="text-custom-gray-100 sm:text-[11px] md:text-[13px]">
+        <p className="text-custom-gray-100 max-sm:text-[9px] sm:text-[11px] md:text-[13px]">
           {edition}
         </p>
-        <p className="text-custom-white">{title}</p>
-        <p className="text-sm text-custom-white">
+        <p className="text-custom-white max-sm:text-[12px]">{title}</p>
+        <p className="text-custom-white max-sm:text-[11px] sm:text-sm">
           <GamePrice
             baseGamePrice={price}
             discount={discount}

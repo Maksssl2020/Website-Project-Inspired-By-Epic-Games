@@ -1,8 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import ContentList from "./ContentList.jsx";
 import GlobeIcon from "./icons/GlobeIcon.jsx";
-import { Link } from "react-router-dom";
-import UserIcon from "./icons/UserIcon.jsx";
 import { languagesData } from "../../website-data/LanguagesData.js";
 
 function GlobIconAccordionSmallScreens() {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import CheckCircleIcon from "./icons/CheckCircleIcon.jsx";
 import FilledCheckCircleIcon from "./icons/FilledCheckCircleIcon.jsx";
 
