@@ -6,8 +6,8 @@ import MainButton from "../../main-elements/MainButton.jsx";
 
 function FreeGamesSection() {
   return (
-    <div className="rounded-lg bg-custom-gray-300 text-custom-white xl:w-[1230px] 2xl:h-[670px] 2xl:w-[1430px]">
-      <div className="max-md:mb-6 max-md:mt-8 md:m-8">
+    <div className="rounded-lg bg-custom-gray-300 text-custom-white max-md:mx-2 md:mx-4 xl:w-[1230px] 2xl:h-[670px] 2xl:w-[1430px]">
+      <div className="max-md:mx-2 max-md:mb-6 max-md:mt-8 md:m-8">
         <div className="mb-8 flex items-center gap-4 max-lg:h-[30px] max-sm:h-[15px]">
           <GiftIcon />
           <h2 className="text-lg max-md:text-sm">Free Games</h2>
